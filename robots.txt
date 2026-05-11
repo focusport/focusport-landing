@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://focusport.github.io/focusport-landing/sitemap.xml
