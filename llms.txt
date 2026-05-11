@@ -1,1 +1,24 @@
+# FocusPort
 
+> FocusPort is a free Android app that blocks distracting apps (Instagram, YouTube, TikTok) during focus sessions using Android Accessibility Service. No bypasses. Sessions can't be exited without breaking your streak.
+
+## App
+- Name: FocusPort
+- Platform: Android (Google Play)
+- Package: com.focusport.app
+- Category: Productivity / Focus / App Blocker
+- Price: Free (with optional premium)
+- Play Store: https://play.google.com/store/apps/details?id=com.focusport.app
+
+## Key Features
+- Blocks selected apps during timed focus sessions
+- No easy bypass — only a 5-second hold that breaks your streak
+- Emergency app whitelist (Phone, WhatsApp, etc.)
+- Scheduled automatic sessions
+- Streak tracking and session history
+- Works offline
+- Uses Accessibility Service for real blocking
+
+## Contact
+- Email: focusportapp@gmail.com
+- Privacy: https://focusport.github.io/focusport-privacy/
