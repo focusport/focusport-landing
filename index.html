@@ -1,0 +1,1507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>FocusPort – App Blocker That Actually Stops You | No Bypass, No Cheating</title>
+    <meta name="description" content="FocusPort blocks distracting apps until your session ends — so you stop escaping into scrolling automatically. No bypasses, no 5 more minutes, no fake discipline."/>
+    <meta name="keywords" content="focus app android, app blocker android, screen time lock, distraction blocker, focus mode, phone lock timer, study app, app blocker without bypass, best app blocker for students, how to stop doomscrolling, block Instagram, block YouTube, block TikTok, FocusPort"/>
+    <meta property="og:title" content="FocusPort – The Focus App That Removes the Option to Cheat"/>
+    <meta property="og:description" content="Block distracting apps until your session ends. No bypasses. No 5 more minutes. Just real focus."/>
+    <meta property="og:type" content="website"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+
+    <style>
+        :root {
+            --black: #06080c;
+            --deep: #0a0d14;
+            --dark: #0f131c;
+            --card: #131820;
+            --card-hover: #181e29;
+            --border: rgba(255, 255, 255, 0.06);
+            --border-light: rgba(255, 255, 255, 0.1);
+            --orange: #FF5F1F;
+            --orange-bright: #FF7B3D;
+            --orange-soft: rgba(255, 95, 31, 0.08);
+            --blue: #3B8EFF;
+            --blue-glow: rgba(59, 142, 255, 0.2);
+            --white: #FFFFFF;
+            --grey: #6B7280;
+            --light-grey: #9CA3AF;
+            --lighter-grey: #D1D5DB;
+            --gradient-1: linear-gradient(135deg, #FF5F1F 0%, #FF3D00 50%, #FF7B3D 100%);
+            --radius-sm: 10px;
+            --radius: 16px;
+            --radius-lg: 24px;
+            --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scrollbar-width: thin;
+            scrollbar-color: #1f2937 #0a0d14;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0d14;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1f2937;
+            border-radius: 3px;
+        }
+
+        body {
+            background: var(--black);
+            color: var(--white);
+            font-family: 'DM Sans', 'Inter', sans-serif;
+            overflow-x: hidden;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* ─── NAV ─── */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 14px 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(6, 8, 12, 0.82);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border-bottom: 1px solid var(--border);
+            transition: all var(--transition);
+        }
+        nav.scrolled {
+            padding: 8px 32px;
+            background: rgba(6, 8, 12, 0.94);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            z-index: 101;
+        }
+        .nav-logo-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--card);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border);
+            font-size: 18px;
+        }
+        .nav-logo-text {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 22px;
+            letter-spacing: 1.5px;
+            color: var(--white);
+            font-weight: 700;
+        }
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-links a {
+            color: var(--grey);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            transition: color var(--transition-fast);
+            letter-spacing: 0.3px;
+        }
+        .nav-links a:hover {
+            color: var(--white);
+        }
+        .nav-cta {
+            background: var(--gradient-1) !important;
+            color: var(--white) !important;
+            padding: 9px 18px !important;
+            border-radius: 100px !important;
+            font-weight: 600 !important;
+            font-size: 12.5px !important;
+            transition: all var(--transition) !important;
+            letter-spacing: 0.4px !important;
+            text-decoration: none !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 6px !important;
+        }
+        .nav-cta:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 25px rgba(255, 95, 31, 0.25);
+            color: var(--white) !important;
+        }
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 101;
+            padding: 8px;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .mobile-menu-btn span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--white);
+            border-radius: 2px;
+            transition: all var(--transition);
+        }
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+        .mobile-menu {
+            position: fixed;
+            inset: 0;
+            background: rgba(6, 8, 12, 0.96);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            z-index: 99;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 28px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity var(--transition);
+        }
+        .mobile-menu.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+        .mobile-menu a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 26px;
+            font-weight: 700;
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 2px;
+        }
+        .mobile-menu .mobile-cta {
+            background: var(--gradient-1);
+            padding: 14px 32px;
+            border-radius: 100px;
+            font-size: 18px !important;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* ─── HERO ─── */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 140px 32px 100px;
+            position: relative;
+            overflow: hidden;
+            isolation: isolate;
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 70% 50% at 50% 0%, rgba(255, 95, 31, 0.1) 0%, transparent 60%),
+                radial-gradient(ellipse 50% 35% at 25% 75%, rgba(59, 142, 255, 0.05) 0%, transparent 50%);
+            z-index: -1;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 95, 31, 0.07);
+            border: 1px solid rgba(255, 95, 31, 0.2);
+            border-radius: 100px;
+            padding: 7px 18px;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--orange-bright);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 32px;
+            animation: fadeUp 0.6s ease both;
+        }
+        .hero-badge::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--orange);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.4;
+                transform: scale(1.5);
+            }
+        }
+        .hero-title {
+            font-family: 'DM Sans', 'Inter', sans-serif;
+            font-size: clamp(34px, 4.5vw, 48px);
+            line-height: 1.18;
+            letter-spacing: -0.4px;
+            font-weight: 700;
+            max-width: 650px;
+            margin-bottom: 14px;
+            animation: fadeUp 0.6s 0.1s ease both;
+            color: var(--white);
+        }
+        .hero-title .highlight {
+            color: var(--orange);
+        }
+        .hero-subtitle {
+            font-size: clamp(16px, 2.2vw, 18px);
+            color: var(--light-grey);
+            max-width: 530px;
+            line-height: 1.55;
+            margin-bottom: 10px;
+            animation: fadeUp 0.6s 0.2s ease both;
+            font-weight: 400;
+        }
+        .hero-differentiator {
+            font-family: 'Space Mono', monospace;
+            font-size: 12.5px;
+            color: var(--orange);
+            letter-spacing: 0.6px;
+            margin-bottom: 36px;
+            animation: fadeUp 0.6s 0.25s ease both;
+            text-transform: uppercase;
+        }
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+            animation: fadeUp 0.6s 0.35s ease both;
+            margin-bottom: 56px;
+        }
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--gradient-1);
+            color: var(--white);
+            padding: 15px 32px;
+            border-radius: 100px;
+            font-size: 15px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all var(--transition);
+            letter-spacing: 0.3px;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 40px rgba(255, 95, 31, 0.25);
+        }
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            color: var(--white);
+            padding: 15px 26px;
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            border: 1px solid var(--border-light);
+            transition: all var(--transition);
+            cursor: pointer;
+        }
+        .btn-secondary:hover {
+            border-color: rgba(255, 255, 255, 0.22);
+            background: rgba(255, 255, 255, 0.03);
+            transform: translateY(-2px);
+        }
+        .hero-stats {
+            display: flex;
+            gap: 44px;
+            align-items: center;
+            animation: fadeUp 0.6s 0.45s ease both;
+        }
+        .stat-item {
+            text-align: center;
+        }
+        .stat-num {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 36px;
+            color: var(--orange);
+            line-height: 1;
+        }
+        .stat-label {
+            font-size: 11px;
+            color: var(--grey);
+            letter-spacing: 0.6px;
+            margin-top: 4px;
+            text-transform: uppercase;
+        }
+        .stat-divider {
+            width: 1px;
+            height: 38px;
+            background: var(--border);
+        }
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ─── SECTIONS ─── */
+        section {
+            padding: 96px 40px;
+        }
+        .section-tag {
+            font-family: 'Space Mono', monospace;
+            font-size: 10.5px;
+            color: var(--orange);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+            display: inline-block;
+            background: var(--orange-soft);
+            padding: 5px 12px;
+            border-radius: 100px;
+            border: 1px solid rgba(255, 95, 31, 0.12);
+        }
+        .section-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(42px, 5vw, 68px);
+            line-height: 0.94;
+            letter-spacing: 1.5px;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+        .section-desc {
+            font-size: 16px;
+            color: var(--light-grey);
+            max-width: 520px;
+            line-height: 1.6;
+            font-weight: 350;
+        }
+
+        /* ─── SCREENSHOTS ─── */
+        .screenshots-section {
+            background: var(--deep);
+        }
+        .screenshots-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .screenshots-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 16px;
+            margin-top: 40px;
+        }
+        .screenshot-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: all var(--transition);
+        }
+        .screenshot-card:hover {
+            border-color: var(--border-light);
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+        }
+        .screenshot-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+        .screenshot-label {
+            padding: 10px 12px;
+            font-size: 11px;
+            color: var(--grey);
+            letter-spacing: 0.4px;
+            font-weight: 500;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        /* ─── HOW IT WORKS ─── */
+        .how-section {
+            background: var(--black);
+        }
+        .how-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+        .steps {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            margin-top: 36px;
+        }
+        .step {
+            display: flex;
+            gap: 22px;
+            padding: 26px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .step:last-child {
+            border-bottom: none;
+        }
+        .step-num {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 44px;
+            color: rgba(255, 255, 255, 0.05);
+            line-height: 1;
+            min-width: 48px;
+            font-weight: 700;
+        }
+        .step-content h3 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            letter-spacing: -0.2px;
+        }
+        .step-content p {
+            font-size: 13.5px;
+            color: var(--light-grey);
+            line-height: 1.55;
+            font-weight: 350;
+        }
+        .how-visual {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .phone-mockup {
+            width: 240px;
+            height: 480px;
+            background: #0d1118;
+            border-radius: 36px;
+            border: 2px solid rgba(255, 255, 255, 0.08);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+        }
+        .phone-screen {
+            position: absolute;
+            inset: 12px;
+            background: #060a10;
+            border-radius: 26px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+        .phone-ring {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: var(--blue);
+            border-right-color: var(--blue);
+            animation: spin 4s linear infinite;
+            box-shadow: 0 0 25px var(--blue-glow);
+        }
+        .phone-timer {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 34px;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+        .phone-tag {
+            background: rgba(255, 95, 31, 0.1);
+            border: 1px solid rgba(255, 95, 31, 0.18);
+            border-radius: 16px;
+            padding: 5px 14px;
+            font-size: 11px;
+            color: var(--orange-bright);
+            font-weight: 600;
+        }
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* ─── HOW IT REALLY WORKS ─── */
+        .transparency-section {
+            background: var(--deep);
+        }
+        .transparency-inner {
+            max-width: 720px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .transparency-list {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 32px;
+        }
+        .transparency-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 18px 22px;
+            background: var(--card);
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            font-size: 14px;
+            color: var(--lighter-grey);
+            line-height: 1.55;
+        }
+        .transparency-icon {
+            flex-shrink: 0;
+            font-size: 18px;
+            margin-top: 1px;
+        }
+        .transparency-item strong {
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        /* ─── FEATURES ─── */
+        .features-section {
+            background: var(--black);
+        }
+        .features-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .features-header {
+            margin-bottom: 48px;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+        .feature-card {
+            background: var(--card);
+            padding: 38px 30px;
+            transition: background var(--transition-fast);
+        }
+        .feature-card:hover {
+            background: var(--card-hover);
+        }
+        .feature-icon {
+            font-size: 26px;
+            margin-bottom: 16px;
+        }
+        .feature-card h3 {
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .feature-card p {
+            font-size: 13.5px;
+            color: var(--light-grey);
+            line-height: 1.55;
+            font-weight: 350;
+        }
+
+        /* ─── WHY FOCUSPORT ─── */
+        .why-section {
+            background: var(--deep);
+        }
+        .why-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 72px;
+            align-items: start;
+        }
+        .comparison {
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+        }
+        .comparison-label {
+            font-family: 'Space Mono', monospace;
+            font-size: 10px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+            width: fit-content;
+        }
+        .comp-other {
+            color: var(--grey);
+            background: rgba(107, 114, 128, 0.06);
+        }
+        .comp-focusport {
+            color: var(--orange);
+            margin-top: 16px;
+            background: rgba(255, 95, 31, 0.06);
+        }
+        .comp-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 13px 18px;
+            background: var(--card);
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            font-size: 13.5px;
+        }
+        .comp-item.bad {
+            opacity: 0.5;
+        }
+        .comp-item.good {
+            border-color: rgba(255, 95, 31, 0.18);
+            background: rgba(255, 95, 31, 0.03);
+            font-weight: 500;
+        }
+        .comp-icon {
+            font-size: 15px;
+            flex-shrink: 0;
+        }
+
+        /* ─── FAQ ─── */
+        .faq-section {
+            background: var(--black);
+        }
+        .faq-inner {
+            max-width: 720px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .faq-inner .section-title {
+            margin-bottom: 44px;
+        }
+        .faq-list {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+        .faq-item {
+            background: var(--card);
+            border: none;
+            padding: 0;
+        }
+        .faq-q {
+            width: 100%;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-family: 'DM Sans', 'Inter', sans-serif;
+            font-size: 14.5px;
+            font-weight: 600;
+            padding: 21px 24px;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            transition: color var(--transition-fast);
+        }
+        .faq-q:hover {
+            color: var(--orange);
+        }
+        .faq-arrow {
+            font-size: 16px;
+            transition: transform var(--transition);
+            flex-shrink: 0;
+            color: var(--grey);
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.02);
+        }
+        .faq-item.open .faq-arrow {
+            transform: rotate(180deg);
+            color: var(--orange);
+            background: rgba(255, 95, 31, 0.08);
+        }
+        .faq-a {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+            font-size: 13.5px;
+            color: var(--light-grey);
+            line-height: 1.6;
+            font-weight: 350;
+            padding: 0 24px;
+        }
+        .faq-item.open .faq-a {
+            max-height: 260px;
+            padding: 0 24px 20px;
+        }
+
+        /* ─── MID CTA ─── */
+        .mid-cta-section {
+            background: var(--deep);
+            text-align: center;
+            padding: 60px 24px;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .mid-cta-inner {
+            max-width: 560px;
+            margin: 0 auto;
+        }
+        .mid-cta-text {
+            font-size: 19px;
+            font-weight: 600;
+            margin-bottom: 18px;
+            letter-spacing: -0.3px;
+        }
+        .mid-cta-text span {
+            color: var(--orange);
+        }
+
+        /* ─── BOTTOM CTA ─── */
+        .cta-section {
+            background: var(--black);
+            text-align: center;
+            padding: 96px 24px;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-glow {
+            position: absolute;
+            width: 350px;
+            height: 180px;
+            background: radial-gradient(ellipse, rgba(255, 95, 31, 0.1) 0%, transparent 70%);
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+        .cta-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(44px, 6.5vw, 80px);
+            line-height: 0.9;
+            letter-spacing: 1.5px;
+            margin-bottom: 16px;
+            position: relative;
+            font-weight: 700;
+        }
+        .cta-title .line-orange {
+            color: var(--orange);
+        }
+        .cta-desc {
+            font-size: 16px;
+            color: var(--light-grey);
+            margin-bottom: 36px;
+            font-weight: 350;
+            position: relative;
+        }
+
+        /* ─── FOOTER ─── */
+        footer {
+            background: var(--black);
+            border-top: 1px solid var(--border);
+            padding: 40px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .footer-brand {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 20px;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+        }
+        .footer-links {
+            display: flex;
+            gap: 26px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        .footer-links a {
+            color: var(--grey);
+            text-decoration: none;
+            font-size: 12.5px;
+            font-weight: 500;
+            transition: color var(--transition-fast);
+        }
+        .footer-links a:hover {
+            color: var(--white);
+        }
+        .footer-copy {
+            font-size: 12px;
+            color: var(--grey);
+            font-weight: 400;
+        }
+
+        /* ─── SCROLL REVEAL ─── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ─── PLAY STORE BADGE ─── */
+        .play-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #000;
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: all var(--transition-fast);
+        }
+        .play-badge:hover {
+            border-color: rgba(255, 255, 255, 0.3);
+            background: #111;
+        }
+        .play-badge svg {
+            flex-shrink: 0;
+        }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width: 900px) {
+            nav {
+                padding: 12px 18px;
+            }
+            nav.scrolled {
+                padding: 8px 18px;
+            }
+            .nav-links {
+                display: none;
+            }
+            .mobile-menu-btn {
+                display: flex;
+            }
+            section {
+                padding: 64px 20px;
+            }
+            .how-inner,
+            .why-inner {
+                grid-template-columns: 1fr;
+                gap: 36px;
+            }
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            .screenshots-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+            .hero-stats {
+                gap: 18px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .stat-divider {
+                display: none;
+            }
+            .phone-mockup {
+                width: 200px;
+                height: 400px;
+            }
+            .phone-ring {
+                width: 110px;
+                height: 110px;
+            }
+            .phone-timer {
+                font-size: 26px;
+            }
+            footer {
+                flex-direction: column;
+                text-align: center;
+                padding: 28px 20px;
+            }
+            .footer-links {
+                justify-content: center;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: clamp(26px, 7vw, 32px);
+            }
+            .hero-subtitle {
+                font-size: 14px;
+            }
+            .btn-primary,
+            .btn-secondary {
+                padding: 14px 20px;
+                font-size: 13px;
+                width: 100%;
+                justify-content: center;
+            }
+            .hero-actions {
+                flex-direction: column;
+                width: 100%;
+                max-width: 300px;
+            }
+            .section-title {
+                font-size: clamp(32px, 7vw, 40px);
+            }
+            .screenshots-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
+            }
+            .stat-num {
+                font-size: 28px;
+            }
+        }
+    </style>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "FocusPort",
+            "alternateName": "FocusPort App Blocker",
+            "description": "FocusPort blocks distracting apps until your session ends. No bypasses, no 5 more minutes. The focus app that removes the option to cheat.",
+            "applicationCategory": "ProductivityApplication",
+            "operatingSystem": "Android",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "featureList": [
+                "Blocks distracting apps during focus sessions",
+                "No exit until timer ends",
+                "Emergency app whitelist",
+                "Scheduled automatic focus sessions",
+                "Streak tracking",
+                "Works offline",
+                "Blocks Instagram, YouTube, TikTok"
+            ]
+        }
+    </script>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav id="navbar">
+        <a href="#" class="nav-logo">
+            <div class="nav-logo-icon">🎯</div>
+            <span class="nav-logo-text">FocusPort</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#screenshots">Screenshots</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how">How It Works</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.focusport.app" target="_blank" rel="noopener" class="nav-cta">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+                Install
+            </a></li>
+        </ul>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#screenshots">Screenshots</a>
+        <a href="#features">Features</a>
+        <a href="#how">How It Works</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://play.google.com/store/apps/details?id=com.focusport.app" target="_blank" rel="noopener" class="mobile-cta">
+            ▶ Install from Google Play
+        </a>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+
+        <div class="hero-badge">🔒 Free on Google Play</div>
+
+        <h1 class="hero-title">
+            Stop opening distracting apps <span class="highlight">without thinking.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+            FocusPort blocks distracting apps until your session ends — so you stop escaping into scrolling automatically.
+        </p>
+
+        <p class="hero-differentiator">
+            No bypasses. No "5 more minutes." No fake discipline.
+        </p>
+
+        <div class="hero-actions">
+            <a href="https://play.google.com/store/apps/details?id=com.focusport.app" target="_blank" rel="noopener" class="btn-primary">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+                Download on Google Play
+            </a>
+            <a href="#screenshots" class="btn-secondary">
+                See the app →
+            </a>
+        </div>
+
+        <div class="hero-stats">
+            <div class="stat-item">
+                <div class="stat-num">100%</div>
+                <div class="stat-label">Distractions Blocked</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <div class="stat-num">0</div>
+                <div class="stat-label">Easy Bypasses</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <div class="stat-num">Android</div>
+                <div class="stat-label">Native App</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCREENSHOTS -->
+    <section class="screenshots-section" id="screenshots">
+        <div class="screenshots-inner">
+            <p class="section-tag reveal">// Real Screenshots</p>
+            <h2 class="section-title reveal">SEE THE APP.</h2>
+            <p class="section-desc reveal" style="margin: 0 auto;">Here's exactly what FocusPort looks like — from setup to locked session to tracking.</p>
+
+            <div class="screenshots-grid">
+                <div class="screenshot-card reveal">
+                    <img src="sccreen-1.png" alt="FocusPort home screen - set session length and start focusing" loading="lazy" onerror="this.style.background='#131820'; this.style.minHeight='380px'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='#6B7280'; this.style.fontSize='13px'; this.outerHTML='<div style=\'min-height:380px;display:flex;align-items:center;justify-content:center;color:#6B7280;font-size:13px;background:#131820;border-radius:16px;\'>📱 Screen 1</div>';">
+                    <div class="screenshot-label">Home — Set Your Session</div>
+                </div>
+                <div class="screenshot-card reveal">
+                    <img src="sccreen-2.png" alt="FocusPort scheduled sessions and active focus timer" loading="lazy" onerror="this.style.background='#131820'; this.style.minHeight='380px'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='#6B7280'; this.style.fontSize='13px'; this.outerHTML='<div style=\'min-height:380px;display:flex;align-items:center;justify-content:center;color:#6B7280;font-size:13px;background:#131820;border-radius:16px;\'>📱 Screen 2</div>';">
+                    <div class="screenshot-label">Auto-Schedule & Active Timer</div>
+                </div>
+                <div class="screenshot-card reveal">
+                    <img src="sccreen-3.png" alt="FocusPort lock screen - cannot exit during session" loading="lazy" onerror="this.style.background='#131820'; this.style.minHeight='380px'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='#6B7280'; this.style.fontSize='13px'; this.outerHTML='<div style=\'min-height:380px;display:flex;align-items:center;justify-content:center;color:#6B7280;font-size:13px;background:#131820;border-radius:16px;\'>📱 Screen 3</div>';">
+                    <div class="screenshot-label">Locked — No Way Out</div>
+                </div>
+                <div class="screenshot-card reveal">
+                    <img src="sccreen-4.png" alt="FocusPort emergency app whitelist settings" loading="lazy" onerror="this.style.background='#131820'; this.style.minHeight='380px'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='#6B7280'; this.style.fontSize='13px'; this.outerHTML='<div style=\'min-height:380px;display:flex;align-items:center;justify-content:center;color:#6B7280;font-size:13px;background:#131820;border-radius:16px;\'>📱 Screen 4</div>';">
+                    <div class="screenshot-label">Emergency App Whitelist</div>
+                </div>
+                <div class="screenshot-card reveal">
+                    <img src="sccreen-5.png" alt="FocusPort session history and streak tracking" loading="lazy" onerror="this.style.background='#131820'; this.style.minHeight='380px'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='#6B7280'; this.style.fontSize='13px'; this.outerHTML='<div style=\'min-height:380px;display:flex;align-items:center;justify-content:center;color:#6B7280;font-size:13px;background:#131820;border-radius:16px;\'>📱 Screen 5</div>';">
+                    <div class="screenshot-label">Track Sessions & Streaks</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MID CTA -->
+    <div class="mid-cta-section">
+        <div class="mid-cta-inner">
+            <p class="mid-cta-text">Ready to <span>actually</span> focus?</p>
+            <a href="https://play.google.com/store/apps/details?id=com.focusport.app" target="_blank" rel="noopener" class="btn-primary">
+                ▶ Download FocusPort — Free
+            </a>
+        </div>
+    </div>
+
+    <!-- HOW IT WORKS -->
+    <section class="how-section" id="how">
+        <div class="how-inner">
+            <div>
+                <p class="section-tag reveal">// How It Works</p>
+                <h2 class="section-title reveal">THREE STEPS.</h2>
+                <p class="section-desc reveal">Start your first session in under 60 seconds.</p>
+
+                <div class="steps">
+                    <div class="step reveal">
+                        <div class="step-num">01</div>
+                        <div class="step-content">
+                            <h3>Set Your Duration</h3>
+                            <p>Pick 15 minutes or 3 hours. Choose your difficulty level. Tap Start — your distracting apps lock instantly.</p>
+                        </div>
+                    </div>
+                    <div class="step reveal">
+                        <div class="step-num">02</div>
+                        <div class="step-content">
+                            <h3>Distractions Are Blocked</h3>
+                            <p>You can't switch to Instagram, YouTube, TikTok, or any app you've selected. Only your emergency apps stay accessible.</p>
+                        </div>
+                    </div>
+                    <div class="step reveal">
+                        <div class="step-num">03</div>
+                        <div class="step-content">
+                            <h3>Time Ends. Streak Grows.</h3>
+                            <p>Session complete — your streak grows. If you quit early, the streak breaks. Simple, honest accountability.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="how-visual reveal">
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <div class="phone-tag">🎯 Deep Focus</div>
+                        <div style="position:relative; display:flex; align-items:center; justify-content:center;">
+                            <div class="phone-ring"></div>
+                            <div class="phone-timer">44:28</div>
+                        </div>
+                        <div style="font-size:11px; color:#6B7280; letter-spacing:0.5px;">minutes left</div>
+                        <div style="font-size:12px; color:var(--light-grey);">🔥 <span style="color:var(--orange);font-weight:700;">4 Day Streak</span></div>
+                        <div style="font-size:10px; color:#4B5563;">All distractions locked</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT REALLY WORKS (TRANSPARENCY) -->
+    <section class="transparency-section" id="transparency">
+        <div class="transparency-inner">
+            <p class="section-tag reveal">// Transparency</p>
+            <h2 class="section-title reveal">HOW IT ACTUALLY STOPS YOU.</h2>
+            <p class="section-desc reveal" style="margin: 0 auto 8px;">No magic. Just Android permissions used responsibly.</p>
+
+            <div class="transparency-list">
+                <div class="transparency-item reveal">
+                    <span class="transparency-icon">🔧</span>
+                    <div><strong>Uses Android Accessibility Service</strong> — to detect when you try to switch apps during a session. This is how it blocks Instagram, YouTube, TikTok, and any app you choose.</div>
+                </div>
+                <div class="transparency-item reveal">
+                    <span class="transparency-icon">🔒</span>
+                    <div><strong>Blocks selected apps during sessions</strong> — not your whole phone. Calls, messages, and apps you whitelist stay available. Everything else waits until the timer ends.</div>
+                </div>
+                <div class="transparency-item reveal">
+                    <span class="transparency-icon">⚠️</span>
+                    <div><strong>Emergency exit exists, but it breaks your streak</strong> — long-press for 5 seconds to exit. It's there if you genuinely need it, but it's not a casual escape hatch.</div>
+                </div>
+                <div class="transparency-item reveal">
+                    <span class="transparency-icon">📅</span>
+                    <div><strong>Scheduled sessions use Exact Alarm permission</strong> — so your focus sessions start on time, every time. No manual tapping needed.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features-section" id="features">
+        <div class="features-inner">
+            <div class="features-header">
+                <p class="section-tag reveal">// Features</p>
+                <h2 class="section-title reveal">EVERYTHING YOU NEED.</h2>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Blocks Distracting Apps</h3>
+                    <p>Instagram, YouTube, TikTok, Twitter — any app you choose gets blocked during sessions. No shortcuts, no back-gesture escape.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🚨</div>
+                    <h3>Emergency App Whitelist</h3>
+                    <p>Keep Phone, WhatsApp, Maps, and any essential app accessible. Real life doesn't pause — but distractions do.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">📅</div>
+                    <h3>Scheduled Sessions</h3>
+                    <p>Set it once. FocusPort starts automatically at your chosen times — mornings, afternoons, every weekday. You just show up.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🔥</div>
+                    <h3>Streak Tracking</h3>
+                    <p>Complete sessions build your streak. Quit early and it resets. No pretending. Just honest progress you can see.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">📊</div>
+                    <h3>Session History</h3>
+                    <p>See every session — completed and exited. Spot patterns, track improvement, know exactly where your time goes.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">📶</div>
+                    <h3>Works Offline</h3>
+                    <p>No internet needed. All blocking happens on your device. Your data stays local unless you opt into Google Sign-In for sync.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY FOCUSPORT -->
+    <section class="why-section" id="why">
+        <div class="why-inner">
+            <div class="why-left">
+                <p class="section-tag reveal">// The Difference</p>
+                <h2 class="section-title reveal">OTHER APPS LET YOU CHEAT.</h2>
+                <p class="section-desc reveal">Most "focus" apps have a bypass. A "disable for 5 minutes" button. Your brain finds it every time.</p>
+            </div>
+
+            <div class="why-right reveal">
+                <div class="comparison">
+                    <p class="comparison-label comp-other">Other focus apps</p>
+                    <div class="comp-item bad"><span class="comp-icon">❌</span> "Disable for 5 minutes" option</div>
+                    <div class="comp-item bad"><span class="comp-icon">❌</span> Easy bypass through settings</div>
+                    <div class="comp-item bad"><span class="comp-icon">❌</span> Notifications still sneak through</div>
+                    <div class="comp-item bad"><span class="comp-icon">❌</span> No real accountability</div>
+
+                    <p class="comparison-label comp-focusport">FocusPort</p>
+                    <div class="comp-item good"><span class="comp-icon">✅</span> No exit until timer ends</div>
+                    <div class="comp-item good"><span class="comp-icon">✅</span> Accessibility-level blocking</div>
+                    <div class="comp-item good"><span class="comp-icon">✅</span> Emergency apps whitelisted by you</div>
+                    <div class="comp-item good"><span class="comp-icon">✅</span> Streak breaks if you quit early</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section" id="faq">
+        <div class="faq-inner">
+            <p class="section-tag">// FAQ</p>
+            <h2 class="section-title">QUESTIONS?<br/>ANSWERED.</h2>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+                        Can I really not exit during a session?
+                        <span class="faq-arrow">↓</span>
+                    </button>
+                    <div class="faq-a">Correct. Once a session starts, FocusPort uses Android's Accessibility Service to detect and block attempts to switch to blocked apps. The only way out is to long-press the exit button for 5 full seconds — and doing so marks your session as incomplete and breaks your streak.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+                        Can FocusPort block Instagram, YouTube, and TikTok?
+                        <span class="faq-arrow">↓</span>
+                    </button>
+                    <div class="faq-a">Yes. You choose which apps to block. Instagram, YouTube, TikTok, Twitter, Reddit — any app on your phone can be added to the blocked list. During a session, they're completely inaccessible.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+                        Can I bypass FocusPort?
+                        <span class="faq-arrow">↓</span>
+                    </button>
+                    <div class="faq-a">Not easily. Unlike other focus apps that let you disable them from settings, FocusPort uses Accessibility Service-level blocking. The only way out is the 5-second emergency exit — which breaks your streak. There's no "just this once" button.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+                        What makes FocusPort different from Forest?
+                        <span class="faq-arrow">↓</span>
+                    </button>
+                    <div class="faq-a">Forest uses gamification and guilt (killing a tree). FocusPort uses actual blocking — you physically cannot open the apps you've blocked. Forest lets you exit anytime; FocusPort doesn't. Different approaches for different needs.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+                        Does FocusPort work offline?
+                        <span class="faq-arrow">↓</span>
+                    </button>
+                    <div class="faq-a">Yes. All blocking happens on your device. No internet connection needed for sessions to work. Google Sign-In is optional and only used if you want to sync your streak across devices.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+                        Is FocusPort good for students?
+                        <span class="faq-arrow">↓</span>
+                    </button>
+                    <div class="faq-a">Definitely. Students are one of our main user groups. Block social media during study sessions, set automatic focus times during lectures, and track your study streaks. The emergency whitelist keeps Phone and campus apps accessible.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+                        What if I have a real emergency?
+                        <span class="faq-arrow">↓</span>
+                    </button>
+                    <div class="faq-a">The Emergency App whitelist is designed for this. Before any session, add apps you might genuinely need — Phone, WhatsApp, Maps, banking apps. Those stay fully accessible. Everything else is blocked until time ends.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+                        Is FocusPort free?
+                        <span class="faq-arrow">↓</span>
+                    </button>
+                    <div class="faq-a">Yes — core focus locking, 2 emergency app slots, and 1 scheduled session are completely free. Premium unlocks more emergency slots, additional schedules, and longer session options.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+                        What permissions does it need?
+                        <span class="faq-arrow">↓</span>
+                    </button>
+                    <div class="faq-a">FocusPort needs Accessibility Service (to detect app switching and block it), Device Admin (to prevent uninstalling during sessions), and Exact Alarm (for scheduled sessions). These are necessary for real blocking — apps that ask for fewer permissions can be easily bypassed.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOTTOM CTA -->
+    <section class="cta-section" id="download">
+        <div class="cta-inner">
+            <div class="cta-glow"></div>
+            <p class="section-tag">// Download</p>
+            <h2 class="cta-title">STOP<br/><span class="line-orange">SCROLLING.</span><br/>START.</h2>
+            <p class="cta-desc">Your next focus session is 10 seconds away. Free on Google Play.</p>
+            <div class="hero-actions" style="animation: none; opacity: 1; transform: none;">
+                <a href="https://play.google.com/store/apps/details?id=com.focusport.app" target="_blank" rel="noopener" class="btn-primary">
+                    ▶ Get FocusPort — Free
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.focusport.app" target="_blank" rel="noopener" class="play-badge">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+                    Google Play
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-brand">FocusPort</div>
+        <ul class="footer-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="https://focusport.github.io/focusport-privacy/" target="_blank" rel="noopener">Privacy Policy</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.focusport.app" target="_blank" rel="noopener">Google Play</a></li>
+            <li><a href="mailto:focusportapp@gmail.com">Contact</a></li>
+        </ul>
+        <div class="footer-copy">© 2026 FocusPort. Available on Android.</div>
+    </footer>
+
+    <script>
+        // ─── MOBILE MENU ───
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        });
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuBtn.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // ─── NAV SCROLL ───
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // ─── FAQ TOGGLE ───
+        function toggleFaq(btn) {
+            const item = btn.parentElement;
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(i => {
+                i.classList.remove('open');
+                i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+            });
+            if (!isOpen) {
+                item.classList.add('open');
+                btn.setAttribute('aria-expanded', 'true');
+            }
+        }
+
+        // ─── SCROLL REVEAL ───
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('visible');
+                    revealObserver.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.08, rootMargin: '0px 0px -24px 0px' });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        // ─── SMOOTH SCROLL ───
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // ─── SCREENSHOT FALLBACK ───
+        document.querySelectorAll('.screenshot-card img').forEach(img => {
+            img.addEventListener('error', function() {
+                const card = this.parentElement;
+                const label = card.querySelector('.screenshot-label')?.textContent || 'Screenshot';
+                card.innerHTML =
+                    '<div style="min-height:380px;display:flex;align-items:center;justify-content:center;color:#6B7280;font-size:13px;background:#131820;border-radius:16px;flex-direction:column;gap:8px;">📱<span>' +
+                    label + '</span></div>';
+            });
+        });
+
+        console.log('🎯 FocusPort — Launch-ready landing page.');
+        console.log('📱 Play Store: https://play.google.com/store/apps/details?id=com.focusport.app');
+        console.log('📋 Privacy: https://focusport.github.io/focusport-privacy/');
+    </script>
+</body>
+</html>
