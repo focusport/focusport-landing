@@ -101,6 +101,64 @@
                 Not all app blockers are built the same way, though. Some only send gentle reminders, while others let you bypass your own restrictions with a single tap. Below is a hands-on comparison of the tools I tested — including the one I built.
             </p>
 
+            <h2 style="font-size: 22px; font-weight: 700; color: var(--white); margin: 44px 0 16px;">Quick Comparison</h2>
+            <p style="margin-bottom: 16px; font-size: 13px; color: var(--grey);">
+                These are my own impressions from hands-on testing, not standardized benchmarks — treat this as a starting point, not gospel.
+            </p>
+            <div style="overflow-x: auto; margin-bottom: 32px;">
+            <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+                <thead>
+                    <tr style="border-bottom: 1px solid var(--border);">
+                        <th style="text-align: left; padding: 10px 12px; color: var(--white); font-weight: 600;">App</th>
+                        <th style="text-align: left; padding: 10px 12px; color: var(--white); font-weight: 600;">Best For</th>
+                        <th style="text-align: left; padding: 10px 12px; color: var(--white); font-weight: 600;">Strict Mode</th>
+                        <th style="text-align: left; padding: 10px 12px; color: var(--white); font-weight: 600;">Schedule</th>
+                        <th style="text-align: left; padding: 10px 12px; color: var(--white); font-weight: 600;">Emergency Access</th>
+                        <th style="text-align: left; padding: 10px 12px; color: var(--white); font-weight: 600;">Cross-Device</th>
+                        <th style="text-align: left; padding: 10px 12px; color: var(--white); font-weight: 600;">Free Tier</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid var(--border);">
+                        <td style="padding: 10px 12px; color: var(--lighter-grey);">FocusPort</td>
+                        <td style="padding: 10px 12px; color: var(--lighter-grey);">Hard-to-bypass focus sessions</td>
+                        <td style="padding: 10px 12px; color: var(--lighter-grey);">Yes</td>
+                        <td style="padding: 10px 12px; color: var(--lighter-grey);">Yes</td>
+                        <td style="padding: 10px 12px; color: var(--lighter-grey);">Yes</td>
+                        <td style="padding: 10px 12px; color: var(--lighter-grey);">No</td>
+                        <td style="padding: 10px 12px; color: var(--lighter-grey);">Full, no ads</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--border);">
+                        <td style="padding: 10px 12px; color: var(--lighter-grey);">AppBlock</td>
+                        <td style="padding: 10px 12px; color: var(--lighter-grey);">Custom manual rules</td>
+                        <td style="padding: 10px 12px; color: var(--lighter-grey);">Yes, if configured carefully</td>
+                        <td style="padding: 10px 12px; color: var(--lighter-grey);">Yes</td>
+                        <td style="padding: 10px 12px; color: var(--lighter-grey);">Limited</td>
+                        <td style="padding: 10px 12px; color: var(--lighter-grey);">No</td>
+                        <td style="padding: 10px 12px; color: var(--lighter-grey);">Limited, key features paywalled</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--border);">
+                        <td style="padding: 10px 12px; color: var(--lighter-grey);">StayFree</td>
+                        <td style="padding: 10px 12px; color: var(--lighter-grey);">Usage awareness</td>
+                        <td style="padding: 10px 12px; color: var(--lighter-grey);">Weak</td>
+                        <td style="padding: 10px 12px; color: var(--lighter-grey);">No</td>
+                        <td style="padding: 10px 12px; color: var(--lighter-grey);">No</td>
+                        <td style="padding: 10px 12px; color: var(--lighter-grey);">No</td>
+                        <td style="padding: 10px 12px; color: var(--lighter-grey);">Free + premium</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px 12px; color: var(--lighter-grey);">Freedom</td>
+                        <td style="padding: 10px 12px; color: var(--lighter-grey);">Cross-device syncing</td>
+                        <td style="padding: 10px 12px; color: var(--lighter-grey);">Yes, via local VPN</td>
+                        <td style="padding: 10px 12px; color: var(--lighter-grey);">Yes</td>
+                        <td style="padding: 10px 12px; color: var(--lighter-grey);">No</td>
+                        <td style="padding: 10px 12px; color: var(--lighter-grey);">Yes</td>
+                        <td style="padding: 10px 12px; color: var(--lighter-grey);">Subscription only</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+
             <h2 style="font-size: 20px; font-weight: 700; color: var(--white); margin: 36px 0 16px;">1. FocusPort</h2>
             <p style="margin-bottom: 20px;">
                 I built <strong>FocusPort</strong> after running into the same problem with other blockers: either they were easy to switch off in a weak moment, or they were so rigid I stopped using them within days. The goal was a blocker that's genuinely hard to cheat, without being so inflexible that you abandon it.
@@ -115,7 +173,14 @@
                 <li style="margin-bottom: 8px;"><strong>Privacy & Offline:</strong> Runs fully local, no usage data leaves your device.</li>
                 <li style="margin-bottom: 8px;"><strong>Free:</strong> Core blocking and scheduling are free, no ads.</li>
             </ul>
-            <p style="margin-bottom: 8px; color: var(--white); font-weight: 600;">Where it's still catching up:</p>
+            <p style="margin-bottom: 8px; color: var(--white); font-weight: 600;">✅ Pros:</p>
+            <ul style="margin: 0 0 16px 24px; padding-left: 0;">
+                <li style="margin-bottom: 8px;">Strict mode has no built-in escape hatch mid-session.</li>
+                <li style="margin-bottom: 8px;">Emergency whitelist keeps essential apps usable without breaking the block.</li>
+                <li style="margin-bottom: 8px;">Scheduling works well for recurring study/work blocks.</li>
+                <li style="margin-bottom: 8px;">Fully free, no ads, runs offline.</li>
+            </ul>
+            <p style="margin-bottom: 8px; color: var(--white); font-weight: 600;">❌ Cons:</p>
             <ul style="margin: 0 0 20px 24px; padding-left: 0;">
                 <li style="margin-bottom: 8px;">No per-app custom rule sets yet — sessions currently block your full preset list rather than mixing rules per app.</li>
                 <li style="margin-bottom: 8px;">Newer app, so it doesn't have years of reviews or the install base that AppBlock or Freedom have.</li>
@@ -124,18 +189,52 @@
 
             <h2 style="font-size: 20px; font-weight: 700; color: var(--white); margin: 36px 0 16px;">2. AppBlock</h2>
             <p style="margin-bottom: 20px;">
-                AppBlock lets you create multiple usage profiles and block both apps and specific websites on a schedule. It's more customizable than FocusPort in terms of manual rule-building, and it's an established app with a large user base. The tradeoff: several useful features sit behind a paywall, and strict mode has to be configured carefully — left on default settings, it's easier to disable mid-session than I expected.
+                AppBlock lets you create multiple usage profiles and block both apps and specific websites on a schedule. It's more customizable than FocusPort in terms of manual rule-building, and it's an established app with a large user base.
             </p>
+            <p style="margin-bottom: 8px; color: var(--white); font-weight: 600;">✅ Pros:</p>
+            <ul style="margin: 0 0 16px 24px; padding-left: 0;">
+                <li style="margin-bottom: 8px;">Most flexible manual rule-building of the group.</li>
+                <li style="margin-bottom: 8px;">Blocks specific websites, not just apps.</li>
+                <li style="margin-bottom: 8px;">Large, established user base.</li>
+            </ul>
+            <p style="margin-bottom: 8px; color: var(--white); font-weight: 600;">❌ Cons:</p>
+            <ul style="margin: 0 0 20px 24px; padding-left: 0;">
+                <li style="margin-bottom: 8px;">Several useful features sit behind a paywall.</li>
+                <li style="margin-bottom: 8px;">Strict mode has to be configured carefully — on default settings, it was easier to disable mid-session than I expected.</li>
+            </ul>
 
             <h2 style="font-size: 20px; font-weight: 700; color: var(--white); margin: 36px 0 16px;">3. StayFree</h2>
             <p style="margin-bottom: 20px;">
-                StayFree is primarily a screen-time tracker with app limits layered on top. Its usage analytics are genuinely good for spotting patterns in your own behavior. But it's built around awareness rather than hard enforcement, so if you need something that physically stops you from opening an app, it's not the strongest option — the limits are easier to override in the moment than a strict blocker.
+                StayFree is primarily a screen-time tracker with app limits layered on top. Its usage analytics are genuinely good for spotting patterns in your own behavior.
             </p>
+            <p style="margin-bottom: 8px; color: var(--white); font-weight: 600;">✅ Pros:</p>
+            <ul style="margin: 0 0 16px 24px; padding-left: 0;">
+                <li style="margin-bottom: 8px;">Best usage analytics and habit insights of the group.</li>
+                <li style="margin-bottom: 8px;">Good starting point if you don't yet know where your time actually goes.</li>
+                <li style="margin-bottom: 8px;">Free tier is genuinely usable.</li>
+            </ul>
+            <p style="margin-bottom: 8px; color: var(--white); font-weight: 600;">❌ Cons:</p>
+            <ul style="margin: 0 0 20px 24px; padding-left: 0;">
+                <li style="margin-bottom: 8px;">Built around awareness, not hard enforcement — limits are easy to override in the moment.</li>
+                <li style="margin-bottom: 8px;">No scheduling or emergency-access system.</li>
+                <li style="margin-bottom: 8px;">Not a good fit if you need something that physically stops you from opening an app.</li>
+            </ul>
 
             <h2 style="font-size: 20px; font-weight: 700; color: var(--white); margin: 36px 0 16px;">4. Freedom</h2>
             <p style="margin-bottom: 20px;">
-                Freedom's strongest feature is syncing blocks across your phone and computer, which none of the other apps here do. On Android, it relies on a local VPN to enforce blocking, which occasionally felt less stable in my testing and can be worked around by disabling the VPN in system settings. It's also subscription-only, with no meaningful free tier.
+                Freedom's strongest feature is syncing blocks across your phone and computer, which none of the other apps here do.
             </p>
+            <p style="margin-bottom: 8px; color: var(--white); font-weight: 600;">✅ Pros:</p>
+            <ul style="margin: 0 0 16px 24px; padding-left: 0;">
+                <li style="margin-bottom: 8px;">Only app here with real cross-device syncing (phone + desktop).</li>
+                <li style="margin-bottom: 8px;">Scheduling and strict mode both included.</li>
+            </ul>
+            <p style="margin-bottom: 8px; color: var(--white); font-weight: 600;">❌ Cons:</p>
+            <ul style="margin: 0 0 20px 24px; padding-left: 0;">
+                <li style="margin-bottom: 8px;">On Android, blocking relies on a local VPN, which occasionally felt less stable in my testing and can be worked around by disabling the VPN in system settings.</li>
+                <li style="margin-bottom: 8px;">Subscription-only, no meaningful free tier.</li>
+                <li style="margin-bottom: 8px;">No emergency-access whitelist.</li>
+            </ul>
 
             <h2 style="font-size: 22px; font-weight: 700; color: var(--white); margin: 44px 0 16px;">So Which One Should You Use?</h2>
             <p style="margin-bottom: 20px;">
