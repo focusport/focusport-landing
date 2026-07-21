@@ -390,6 +390,34 @@
                     </button>
                     <div class="faq-a">FocusPort needs Accessibility Service (to detect app switching and block it), Device Admin (to prevent uninstalling during sessions), and Exact Alarm (for scheduled sessions). These are necessary for real blocking — apps that ask for fewer permissions can be easily bypassed.</div>
                 </div>
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+                        Why does FocusPort need Accessibility permission?
+                        <span class="faq-arrow">↓</span>
+                    </button>
+                    <div class="faq-a">Android requires Accessibility Service for apps that need to detect and block other apps. FocusPort uses it only during focus sessions to prevent opening distracting apps. Without Accessibility permission, FocusPort cannot block apps.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+                        Does FocusPort collect my personal data?
+                        <span class="faq-arrow">↓</span>
+                    </button>
+                    <div class="faq-a">No. FocusPort does not access or store messages, passwords, photos, contacts, or personal files. The permission is used only for focus enforcement.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+                        Why do I need to enable Autostart on Xiaomi/Redmi/Poco devices?
+                        <span class="faq-arrow">↓</span>
+                    </button>
+                    <div class="faq-a">HyperOS may close background services automatically. Autostart allows FocusPort to continue running during an active focus session.</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+                        Why does FocusPort work on some phones but not others?
+                        <span class="faq-arrow">↓</span>
+                    </button>
+                    <div class="faq-a">Android manufacturers modify Android with their own battery management systems. Samsung, Pixel, Xiaomi, Vivo, Oppo, and others handle background apps differently. Some devices require additional settings for reliable blocking.</div>
+                </div>
             </div>
         </div>
     </section>
