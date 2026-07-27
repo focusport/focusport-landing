@@ -18,4 +18,4 @@
 - Uses Accessibility Service for real blocking
 
 ## Contact
-- Email: focusportapp@gmail.com
+- Email: Support@focusport.in
