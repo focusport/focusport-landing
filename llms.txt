@@ -18,4 +18,4 @@
 - Uses Accessibility Service for real blocking
 
 ## Contact
-- Email: Support@focusport.in
+- Email: support@focusport.in
