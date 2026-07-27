@@ -10,9 +10,10 @@
     <meta property="og:description" content="Block distracting apps until your session ends. No bypasses. No 5 more minutes. Just real focus."/>
     <meta property="og:type" content="website"/>
     <meta name="twitter:card" content="summary_large_image"/>
-    <link rel="apple-touch-icon" href="app-logo-quality-boostedd.webp">
-    <link rel="icon" type="image/png" href="app-logo-quality-boostedd.webp">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23FF5F1F'/><text y='.9em' font-size='75' x='12'>🎯</text></svg>"> <link rel="shortcut icon" href="app-logo-quality-boostedd.webp">
+    <link rel="apple-touch-icon" href="app-logo.webp">
+    <link rel="icon" type="image/png" href="app-logo.webp">
+    <link rel="icon" href="app-logo.webp">
+    <link rel="shortcut icon" href="app-logo.webp">
     <meta name="msvalidate.01" content="F23DBF1B78C02EE40D5FBE3FE1F5C531" />
     <meta name="google-site-verification" content="o26kYwpjrfTstBGEtNyZBrcji_13mqVul2QViuWlbcE" />
     <link rel="canonical" href="https://focusport.in/" />
@@ -53,7 +54,9 @@
     <!-- NAV -->
     <nav id="navbar">
         <a href="#" class="nav-logo">
-            <div class="nav-logo-icon">🎯</div>
+            <div class="nav-logo-icon">
+                <img src="app-logo.webp" alt="FocusPort logo" />
+            </div>
             <span class="nav-logo-text">FocusPort</span>
         </a>
         <ul class="nav-links">
@@ -89,6 +92,10 @@
     <!-- HERO -->
     <section class="hero">
         <div class="hero-bg"></div>
+
+        <div class="hero-logo-card reveal">
+            <img src="app-logo.webp" alt="FocusPort app logo" />
+        </div>
 
         <div class="hero-badge">🔒 Free on Google Play</div>
 
@@ -316,112 +323,6 @@
                     <div class="comp-item good"><span class="comp-icon">✅</span> Accessibility-level blocking</div>
                     <div class="comp-item good"><span class="comp-icon">✅</span> Emergency apps whitelisted by you</div>
                     <div class="comp-item good"><span class="comp-icon">✅</span> Streak breaks if you quit early</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="faq-section" id="faq">
-        <div class="faq-inner">
-            <p class="section-tag">// FAQ</p>
-            <h2 class="section-title">QUESTIONS?<br/>ANSWERED.</h2>
-
-            <div style="margin-bottom: 24px; text-align: center;">
-                <a href="faq.html" class="btn-secondary" style="display: inline-flex; align-items: center; gap: 8px;">View all FAQs →</a>
-            </div>
-
-            <div class="faq-list">
-                <div class="faq-item">
-                    <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-                        Can I really not exit during a session?
-                        <span class="faq-arrow">↓</span>
-                    </button>
-                    <div class="faq-a">Correct. Once a session starts, FocusPort uses Android's Accessibility Service to detect and block attempts to switch to blocked apps. The only way out is to long-press the exit button for 5 full seconds — and doing so marks your session as incomplete and breaks your streak.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-                        Can FocusPort block Instagram, YouTube, and TikTok?
-                        <span class="faq-arrow">↓</span>
-                    </button>
-                    <div class="faq-a">Yes. You choose which apps to block. Instagram, YouTube, TikTok, Twitter, Reddit — any app on your phone can be added to the blocked list. During a session, they're completely inaccessible.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-                        Can I bypass FocusPort?
-                        <span class="faq-arrow">↓</span>
-                    </button>
-                    <div class="faq-a">Not easily. Unlike other focus apps that let you disable them from settings, FocusPort uses Accessibility Service-level blocking. The only way out is the 5-second emergency exit — which breaks your streak. There's no "just this once" button.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-                        What makes FocusPort different from Forest?
-                        <span class="faq-arrow">↓</span>
-                    </button>
-                    <div class="faq-a">Forest uses gamification and guilt (killing a tree). FocusPort uses actual blocking — you physically cannot open the apps you've blocked. Forest lets you exit anytime; FocusPort doesn't. Different approaches for different needs.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-                        Does FocusPort work offline?
-                        <span class="faq-arrow">↓</span>
-                    </button>
-                    <div class="faq-a">Yes. All blocking happens on your device. No internet connection needed for sessions to work. Google Sign-In is optional and only used if you want to sync your streak across devices.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-                        Is FocusPort good for students?
-                        <span class="faq-arrow">↓</span>
-                    </button>
-                    <div class="faq-a">Definitely. Students are one of our main user groups. Block social media during study sessions, set automatic focus times during lectures, and track your study streaks. The emergency whitelist keeps Phone and campus apps accessible.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-                        What if I have a real emergency?
-                        <span class="faq-arrow">↓</span>
-                    </button>
-                    <div class="faq-a">The Emergency App whitelist is designed for this. Before any session, add apps you might genuinely need — Phone, WhatsApp, Maps, banking apps. Those stay fully accessible. Everything else is blocked until time ends.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-                        Is FocusPort free?
-                        <span class="faq-arrow">↓</span>
-                    </button>
-                    <div class="faq-a">Yes — FocusPort is completely free to use. Enjoy focus locking, app blocking, scheduled sessions, and all core features at no cost. There are no hidden charges or subscription required</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-                        What permissions does it need?
-                        <span class="faq-arrow">↓</span>
-                    </button>
-                    <div class="faq-a">FocusPort needs Accessibility Service (to detect app switching and block it), Device Admin (to prevent uninstalling during sessions), and Exact Alarm (for scheduled sessions). These are necessary for real blocking — apps that ask for fewer permissions can be easily bypassed.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-                        Why does FocusPort need Accessibility permission?
-                        <span class="faq-arrow">↓</span>
-                    </button>
-                    <div class="faq-a">Android requires Accessibility Service for apps that need to detect and block other apps. FocusPort uses it only during focus sessions to prevent opening distracting apps. Without Accessibility permission, FocusPort cannot block apps.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-                        Does FocusPort collect my personal data?
-                        <span class="faq-arrow">↓</span>
-                    </button>
-                    <div class="faq-a">No. FocusPort does not access or store messages, passwords, photos, contacts, or personal files. The permission is used only for focus enforcement.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-                        Why do I need to enable Autostart on Xiaomi/Redmi/Poco devices?
-                        <span class="faq-arrow">↓</span>
-                    </button>
-                    <div class="faq-a">HyperOS may close background services automatically. Autostart allows FocusPort to continue running during an active focus session.</div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-                        Why does FocusPort work on some phones but not others?
-                        <span class="faq-arrow">↓</span>
-                    </button>
-                    <div class="faq-a">Android manufacturers modify Android with their own battery management systems. Samsung, Pixel, Xiaomi, Vivo, Oppo, and others handle background apps differently. Some devices require additional settings for reliable blocking.</div>
                 </div>
             </div>
         </div>
