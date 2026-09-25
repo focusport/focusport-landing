@@ -29,7 +29,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="../styles.css"/>
+    <link rel="stylesheet" href="../focusport-premium.css"/>
 
     <script type="application/ld+json">
     {
@@ -107,42 +107,96 @@
   "downloadUrl": "https://play.google.com/store/apps/details?id=com.focusport.app"
 }
     </script>
+
+<style>
+.blog-article-shell article {
+  font-size: 15px;
+  color: var(--lighter-grey);
+  line-height: 1.7;
+  font-weight: 350;
+}
+.blog-article-shell article p { margin-bottom: 20px; }
+.blog-article-shell article h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--white);
+  margin: 36px 0 16px;
+  line-height: 1.3;
+}
+.blog-article-shell article h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--white);
+  margin: 28px 0 12px;
+  line-height: 1.35;
+}
+.blog-article-shell article h4 {
+  color: var(--white);
+}
+.blog-article-shell article li {
+  margin-bottom: 8px;
+}
+.blog-article-shell article a {
+  color: var(--orange);
+}
+.blog-article-shell article blockquote {
+  margin: 24px 0;
+  padding: 4px 0 4px 18px;
+  border-left: 3px solid var(--orange);
+  color: var(--white);
+}
+</style>
+
+
+<style>
+.blog-article-shell > article {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}
+</style>
+<style>
+.blog-article-shell > article,
+.blog-article-shell > article p,
+.blog-article-shell > article li,
+.blog-article-shell > article ul,
+.blog-article-shell > article ol,
+.blog-article-shell > article blockquote {
+  color: #ffffff !important;
+}
+.blog-article-shell > article a {
+  color: var(--orange) !important;
+}
+</style>
 </head>
 <body>
 
-<nav id="navbar">
-    <a href="#" class="nav-logo">
-        <div class="nav-logo-icon"><img src="app-logo.webp" alt="FocusPort logo"/></div>
-        <span class="nav-logo-text">FocusPort</span>
-    </a>
-    <ul class="nav-links">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../features.html">Features</a></li>
-        <li><a href="../students.html">For Students</a></li>
-        <li><a href="../professionals.html">For Professionals</a></li>
-        <li><a href="index.html">Blog</a></li>
-        <li><a href="../faq.html">FAQ</a></li>
-        <li><a href="https://play.google.com/store/apps/details?id=com.focusport.app" target="_blank" rel="noopener" class="nav-cta" id="navCtaInstall">Install Free</a></li>
-    </ul>
-    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu"><span></span><span></span><span></span></button>
-</nav>
-
+<header class="site-header" id="siteHeader">
+<a aria-label="FocusPort home" class="brand" href="../index.html"><img alt="FocusPort logo" src="../assets/icons/app-logo.webp"/><span>FocusPort</span></a>
+<nav aria-label="Primary navigation" class="desktop-nav">
+<a href="../index.html">Home</a><a href="../features.html">Features</a><a href="../students.html">Students</a><a href="../professionals.html">Professionals</a><a class="nav-active" href="index.html">Blog</a><a href="../faq.html">FAQ</a>
+<a href="../about.html">About</a></nav>
+<a class="header-cta" href="https://play.google.com/store/apps/details?id=com.focusport.app" rel="noopener" target="_blank">Get FocusPort</a>
+<button aria-expanded="false" aria-label="Open navigation" class="nav-toggle" id="navToggle" type="button"><span></span><span></span></button>
+</header>
+<nav aria-label="Mobile navigation" class="mobile-nav" id="mobileNav">
+<a href="../index.html">Home</a><a href="../features.html">Features</a><a href="../students.html">Students</a><a href="../professionals.html">Professionals</a><a href="index.html">Blog</a><a href="../faq.html">FAQ</a>
+<a href="../about.html">About</a></nav>
 <div class="mobile-menu" id="mobileMenu">
-    <a href="../index.html">Home</a>
-    <a href="../features.html">Features</a>
-    <a href="../students.html">For Students</a>
-    <a href="../professionals.html">For Professionals</a>
-    <a href="index.html">Blog</a>
-    <a href="../faq.html">FAQ</a>
-    <a href="https://play.google.com/store/apps/details?id=com.focusport.app" target="_blank" rel="noopener" class="mobile-cta" id="mobileCtaInstall">▶ Install from Google Play</a>
+<a href="../index.html">Home</a>
+<a href="../features.html">Features</a>
+<a href="../students.html">For Students</a>
+<a href="../professionals.html">For Professionals</a>
+<a href="index.html">Blog</a>
+<a href="../faq.html">FAQ</a>
+<a class="mobile-cta" href="https://play.google.com/store/apps/details?id=com.focusport.app" id="mobileCtaInstall" rel="noopener" target="_blank">▶ Install from Google Play</a>
 </div>
-
-<main style="max-width: 800px; margin: 120px auto 60px; padding: 0 20px;">
+<main class="blog-article-shell" style="max-width: 800px; margin: 120px auto 60px; padding: 0 20px;">
     <span style="font-family:'Space Mono',monospace;font-size:11px;color:var(--orange);text-transform:uppercase;">Android • Digital Wellbeing • App Blocker</span>
     <h1 style="font-family:'DM Sans',sans-serif;font-size:clamp(28px,4vw,42px);line-height:1.2;margin:8px 0 16px;font-weight:700;color:var(--white);">App Blocker for Android: How to Actually Block Distracting Apps</h1>
     <p style="font-size:13px;color:var(--grey);margin-bottom:32px;">Published on September 25, 2026 • FocusPort</p>
 
-    <article class="reveal" style="font-size:15px;color:var(--lighter-grey);line-height:1.7;font-weight:350;">
+    <article style="font-size:15px;color:var(--lighter-grey);line-height:1.7;font-weight:350;">
 
 
 <p>
@@ -1151,13 +1205,38 @@
     </article>
 </main>
 
-<script>
-const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-const mobileMenu = document.getElementById('mobileMenu');
-if (mobileMenuBtn && mobileMenu) {
-  mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('active'));
-}
-</script>
 
+<!-- MOBILE + DESKTOP -->
+<section class="desktop-note compact-section reveal">
+  <div>
+    <p class="eyebrow">MOBILE + DESKTOP</p>
+    <h2>Keep focus <em>synchronized.</em></h2>
+    <p>Run FocusPort across mobile and desktop with the same timer, distraction rules, schedules and progress aligned between devices.</p>
+  </div>
+  <span class="coming-pill">SYNCED</span>
+</section>
+
+<footer>
+  <div class="footer-main">
+    <div><strong>FocusPort</strong><p>Block distractions. Protect your attention.</p></div>
+    <p>support@focusport.in</p>
+  </div>
+  <div class="footer-links">
+    <a href="../features.html">Features</a>
+    <a href="../students.html">Students</a>
+    <a href="../professionals.html">Professionals</a>
+    <a href="index.html">Blog</a>
+    <a href="../faq.html">FAQ</a>
+    <a href="../privacy.html">Privacy</a>
+    <a href="../contact.html">Contact</a>
+    <a href="../about.html">About</a>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 FocusPort.</span>
+    <span>Mobile + Desktop · Cross-device synchronization.</span>
+  </div>
+</footer>
+
+<script src="../focusport-premium.js"></script>
 </body>
 </html>
