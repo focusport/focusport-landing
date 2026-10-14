@@ -1,21 +1,18 @@
 # FocusPort
 
-FocusPort is a strict Android focus app designed to stop compulsive app switching and doomscrolling.
+FocusPort is a strict focus system for Android and Windows designed to make it harder to quit once you decide to focus.
 
-Unlike traditional focus apps, FocusPort blocks distracting apps until your session ends — with no easy bypasses, no “5 more minutes,” and no fake discipline.
+Unlike traditional focus apps, FocusPort blocks distracting apps and websites during active sessions — with no easy bypasses, active-session uninstall protection on Android, and essential allowlist controls.
 
-Unlike traditional focus apps, FocusPort removes easy bypasses and prevents impulsive switching to distracting apps like Instagram, YouTube, TikTok, Reddit, and more.
+## Key Capabilities
 
-## Features
-
-- Block distracting apps during focus sessions
-- Prevent doomscrolling and impulsive app switching
-- Strict focus mode with minimal bypass options
-- Emergency app whitelist
-- Scheduled deep work sessions
-- Focus streak tracking
-- Offline support
-- Android native productivity app
+- Strict focus sessions across Android and Windows
+- Active-session uninstall protection on Android
+- Essential app allowlist for critical communication & study tools
+- Windows desktop process and website blocking
+- Cross-device focus session coordination and streak synchronization
+- Scheduled deep work and study sessions
+- Reliable offline enforcement with optional cloud sync
 
 ## Website
 
@@ -24,6 +21,10 @@ https://focusport.in
 ## Google Play
 
 https://play.google.com/store/apps/details?id=com.focusport.app
+
+## Microsoft Store
+
+https://apps.microsoft.com/detail/9N03JG4MTC2V?hl=en-us&gl=IN&ocid=pdpshare
 
 ## Privacy Policy
 
@@ -35,11 +36,7 @@ https://focusport.github.io/focusport-privacy/
 
 ## Purpose
 
-FocusPort is designed for students, developers, and anyone struggling with compulsive phone checking and doomscrolling.
-
-The goal is simple:
-
-Remove the option to escape focus.
+FocusPort makes it harder to quit once you decide to focus.
 
 ## License
 
