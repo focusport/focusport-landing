@@ -1,217 +1,482 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FAFAF9">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0F1115">
+    <meta name="color-scheme" content="light dark">
     <meta charset="UTF-8"/>
+    <script>try{var t=localStorage.getItem('focusport_theme');document.documentElement.setAttribute('data-theme',t==='light'?'light':'dark')}catch(e){document.documentElement.setAttribute('data-theme','dark')}</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>FocusPort Blog – Digital Wellbeing, Deep Work & Dopamine Detox Guides</title>
-    <meta name="description" content="Explore expert guides on how to stop doomscrolling, perform a dopamine detox, and find the best app blockers for Android to increase work and study focus."/>
+    <title>FocusPort Blog: Focus, Studying and App Blocking Guides</title>
+    <meta name="description" content="Practical guides on blocking distracting apps, studying without your phone, stopping doomscrolling and building deep work habits."/>
+    <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="keywords" content="how to stop scrolling, stop Instagram addiction, stop phone addiction, dopamine detox guide, best app blockers in 2026, how to reduce screen time, Pomodoro technique, time blocking method, digital wellbeing, screen time tracker"/>
     <link rel="canonical" href="https://focusport.in/blog/index.html" />
     
     <!-- Open Graph -->
-    <meta property="og:title" content="FocusPort Blog – Digital Wellness & Productivity Guides"/>
-    <meta property="og:description" content="Read our guides on beating phone addiction, managing time, and achieving deep work."/>
-    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="FocusPort Blog: Focus, Studying and App Blocking Guides"/>
+    <meta property="og:description" content="Practical guides on blocking distracting apps, studying without your phone, stopping doomscrolling and building deep work habits."/>
+    <meta property="og:type" content="website" />
     <meta property="og:url" content="https://focusport.in/blog/index.html">
-    <meta property="og:image" content="https://focusport.in/sccreen-1.webp" />
-    <meta name="twitter:card" content="summary_large_image"/>
+    <meta property="og:site_name" content="FocusPort">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="FocusPort strict app blocker for Android and Windows">
+    <meta property="og:image" content="https://focusport.in/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     
-    <!-- Fonts & CSS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="FocusPort Blog: Focus, Studying and App Blocking Guides"/>
+    <meta name="twitter:description" content="Practical guides on blocking distracting apps, studying without your phone, stopping doomscrolling and building deep work habits."/>
+    <meta name="twitter:image" content="https://focusport.in/og-image.png" />
+    <meta name="twitter:image:alt" content="FocusPort strict app blocker for Android and Windows">
+    <link rel="apple-touch-icon" href="../app-logo.webp">
+    <link rel="icon" type="image/png" href="../app-logo.webp">
+    <link rel="icon" href="../app-logo.webp">
+    <noscript><style>img[loading="lazy"] { opacity: 1 !important; }</style></noscript>
+        <script>
+        (function() {
+            try {
+                var savedTheme = localStorage.getItem('focusport_theme');
+                var theme = savedTheme ? savedTheme : 'dark';
+                document.documentElement.dataset.theme = theme;
+                var themeColor = theme === 'dark' ? '#0F1115' : '#FAFAF9';
+                var meta = document.querySelector('meta[name="theme-color"]');
+                if (meta) meta.setAttribute('content', themeColor);
+            } catch(e) {}
+        })();
+    </script>
+    <link rel="preload" href="../fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../fonts/hanken-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="../styles.css">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Blog",
-      "name": "FocusPort Blog",
-      "description": "Guides and articles dedicated to digital detoxing, beating doomscrolling, productivity hacks, and app blockers.",
-      "url": "https://focusport.in/blog/index.html",
-      "publisher": {
-        "@type": "Organization",
-        "name": "FocusPort"
-      }
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://focusport.in/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://focusport.in/blog/index.html"
+            }
+          ]
+        },
+        {
+          "@type": "Blog",
+          "name": "FocusPort Blog",
+          "description": "Guides and articles dedicated to digital detoxing, beating doomscrolling, productivity hacks, and app blockers.",
+          "url": "https://focusport.in/blog/index.html",
+          "publisher": {
+            "@type": "Organization",
+            "name": "FocusPort"
+          }
+        }
+      ]
     }
     </script>
-
-    <style>
-        @media (max-width: 1000px) {
-            #blog-posts .features-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-            }
-        }
-        @media (max-width: 680px) {
-            #blog-posts .features-grid {
-                grid-template-columns: 1fr !important;
-            }
-        }
-    </style>
 </head>
 <body>
 
-    <!-- NAV -->
-    <nav id="navbar">
-        <a href="../index.html" class="nav-logo">
-            <div class="nav-logo-icon">🎯</div>
-            <span class="nav-logo-text">FocusPort</span>
-        </a>
-        <ul class="nav-links">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../features.html">Features</a></li>
-            <li><a href="../students.html">For Students</a></li>
-            <li><a href="../professionals.html">For Professionals</a></li>
-            <li><a href="index.html" style="color: var(--white); font-weight:700;">Blog</a></li>
-            <li><a href="../faq.html">FAQ</a></li>
-            <li><a href="https://play.google.com/store/apps/details?id=com.focusport.app" target="_blank" rel="noopener" class="nav-cta" id="navCtaInstall">
-                Install Free
-            </a></li>
-        </ul>
-        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
-            <span></span><span></span><span></span>
-        </button>
-    </nav>
-
-    <!-- MOBILE MENU -->
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="../index.html">Home</a>
-        <a href="../features.html">Features</a>
-        <a href="../students.html">For Students</a>
-        <a href="../professionals.html">For Professionals</a>
-        <a href="index.html">Blog</a>
-        <a href="../faq.html">FAQ</a>
-        <a href="https://play.google.com/store/apps/details?id=com.focusport.app" target="_blank" rel="noopener" class="mobile-cta" id="mobileCtaInstall">
-            ▶ Install from Google Play
-        </a>
-    </div>
-
-    <!-- HERO -->
-    <section class="hero" style="min-height: 50vh; padding: 120px 24px 60px;">
-        <div class="hero-bg" style="background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(255, 95, 31, 0.06) 0%, transparent 60%);"></div>
-
-        <div class="hero-badge">📚 Insights & Guides</div>
-
-        <h1 class="hero-title" style="font-size: clamp(32px, 5vw, 54px);">
-            Stop doomscrolling. <span class="highlight">Reclaim your focus.</span>
-        </h1>
-
-        <p class="hero-subtitle">
-            Scientific strategies, practical advice, and step-by-step guides to help you reduce screen time and improve work and study habits.
-        </p>
-    </section>
-
-    <!-- ARTICLES LIST -->
-    <section class="features-section" id="blog-posts" style="background: var(--black); padding: 40px 20px 80px;">
-        <div class="features-inner">
-            <div class="features-grid" style="grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; background: none; border: none; overflow: visible;">
-                
-
-                <!-- Card 1 — New App Blocker Guide -->
-                <div class="feature-card reveal" style="border: 1px solid var(--border); border-radius: var(--radius); display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
-                    <div>
-                        <div style="width:100%; height:180px; background:#181e29; border-radius: var(--radius-sm); margin-bottom: 20px; display:flex; align-items:center; justify-content:center; font-size:40px;">🔒</div>
-                        <span style="font-size: 11px; font-family: 'Space Mono', monospace; color: var(--orange); text-transform: uppercase;">Android • App Blocker</span>
-                        <h3 style="font-size: 19px; margin: 10px 0 12px; line-height: 1.3;">App Blocker for Android: How to Actually Block Distracting Apps</h3>
-                        <p style="margin-bottom: 20px; line-height: 1.5; color: var(--light-grey);">Learn how Android app blockers work, what makes strict blocking different, and how a restricted focus environment can make distractions harder to bypass.</p>
-                    </div>
-                    <a href="app-blocker-for-android.html" class="btn-secondary" style="padding: 10px 20px; font-size: 12px; width: fit-content; text-align: center;" id="blogLinkAppBlocker">Read Guide →</a>
+    <!-- 1. PLAIN TOP BAR NAVIGATION -->
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <img src="../app-logo-64.webp" alt="FocusPort logo" width="32" height="32" class="nav-logo-icon" decoding="async">
+                <span class="nav-logo-text">FocusPort</span>
+            </a>
+            
+            <div class="nav-right">
+                <nav class="nav-links" aria-label="Main Navigation">
+                    <a href="../features.html">Features</a>
+                    <a href="../students.html">For Students</a>
+                    <a href="../professionals.html">For Professionals</a>
+                    <a href="index.html" class="active" aria-current="page">Blog</a>
+                    <a href="../faq.html">FAQ</a>
+                </nav>
+                <div class="nav-actions">
+                    <a href="../windows.html" class="nav-link-secondary">Windows</a>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode" aria-pressed="false" type="button">
+                        <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                        <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    </button>
+                    <a href="https://play.google.com/store/apps/details?id=com.focusport.app" target="_blank" rel="noopener" class="btn-header-cta">Get the app</a>
                 </div>
-
-                <!-- Card 1 -->
-                <div class="feature-card reveal" style="border: 1px solid var(--border); border-radius: var(--radius); display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
-                    <div>
-                        <div style="width:100%; height:180px; background:#181e29; border-radius: var(--radius-sm); margin-bottom: 20px; display:flex; align-items:center; justify-content:center; font-size:40px;">📱</div>
-                        <span style="font-size: 11px; font-family: 'Space Mono', monospace; color: var(--orange); text-transform: uppercase;">Productivity Tools</span>
-                        <h3 style="font-size: 19px; margin: 10px 0 12px; line-height: 1.3;">Best App Blockers for Android in 2026</h3>
-                        <p style="margin-bottom: 20px; line-height: 1.5; color: var(--light-grey);">Compare the top-rated Android app blocker tools including FocusPort, AppBlock, StayFree, and Freedom to see which fits your digital wellbeing goals.</p>
-                    </div>
-                    <a href="best-app-blockers-android.html" class="btn-secondary" style="padding: 10px 20px; font-size: 12px; width: fit-content; text-align: center;" id="blogLinkBlockers">Read Article →</a>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="feature-card reveal" style="border: 1px solid var(--border); border-radius: var(--radius); display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
-                    <div>
-                        <div style="width:100%; height:180px; background:#181e29; border-radius: var(--radius-sm); margin-bottom: 20px; display:flex; align-items:center; justify-content:center; font-size:40px;">🛑</div>
-                        <span style="font-size: 11px; font-family: 'Space Mono', monospace; color: var(--orange); text-transform: uppercase;">Behavioral Guide</span>
-                        <h3 style="font-size: 19px; margin: 10px 0 12px; line-height: 1.3;">How to Stop Doomscrolling on Social Media</h3>
-                        <p style="margin-bottom: 20px; line-height: 1.5; color: var(--light-grey);">Are Reels, Shorts, and TikTok scrolling loops eating your day? Learn the neuroscience of scrolling and how to stop doomscrolling for good.</p>
-                    </div>
-                    <a href="how-to-stop-doomscrolling.html" class="btn-secondary" style="padding: 10px 20px; font-size: 12px; width: fit-content; text-align: center;" id="blogLinkDoomscroll">Read Guide →</a>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="feature-card reveal" style="border: 1px solid var(--border); border-radius: var(--radius); display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
-                    <div>
-                        <div style="width:100%; height:180px; background:#181e29; border-radius: var(--radius-sm); margin-bottom: 20px; display:flex; align-items:center; justify-content:center; font-size:40px;">🔋</div>
-                        <span style="font-size: 11px; font-family: 'Space Mono', monospace; color: var(--orange); text-transform: uppercase;">Digital Wellbeing</span>
-                        <h3 style="font-size: 19px; margin: 10px 0 12px; line-height: 1.3;">The Ultimate Dopamine Detox Guide</h3>
-                        <p style="margin-bottom: 20px; line-height: 1.5; color: var(--light-grey);">Perform a digital detox challenge. Reset your brain's dopamine receptors, beat social media addiction, and improve focus using simple steps.</p>
-                    </div>
-                    <a href="dopamine-detox-guide.html" class="btn-secondary" style="padding: 10px 20px; font-size: 12px; width: fit-content; text-align: center;" id="blogLinkDetox">Read Guide →</a>
-                </div>
-
             </div>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobileNav">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+
+        <div class="mobile-nav" id="mobileNav" aria-label="Mobile Navigation" hidden aria-hidden="true">
+            <div class="mobile-nav-links">
+                <a href="../features.html">Features</a>
+                <a href="../students.html">For Students</a>
+                <a href="../professionals.html">For Professionals</a>
+                <a href="index.html" class="active" aria-current="page">Blog</a>
+                <a href="../faq.html">FAQ</a>
+                <a href="../windows.html">Windows</a>
+            </div>
+            <div class="mobile-nav-actions">
+                <div class="mobile-theme-row">
+                    <span class="mobile-theme-label">Appearance</span>
+                    <button class="theme-toggle" id="mobileThemeToggle" aria-label="Switch to dark mode" aria-pressed="false" type="button">
+                        <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                        <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    </button>
+                </div>
+                <a href="https://play.google.com/store/apps/details?id=com.focusport.app" target="_blank" rel="noopener" class="mobile-cta-btn">Get the app</a>
+                <a href="https://apps.microsoft.com/detail/9N03JG4MTC2V?hl=en-us&gl=IN&ocid=pdpshare" target="_blank" rel="noopener" class="mobile-win-btn btn-windows">Download for Windows</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. PAGE HERO -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <h1 class="hero-title">Stop doomscrolling. Reclaim your attention.</h1>
+            <p class="hero-subtitle">Evidence-based strategies, practical frameworks, and step-by-step guides to help you reduce screen time and improve deep work habits.</p>
         </div>
     </section>
 
+    <!-- 3. ARTICLES GRID -->
+    <main class="section-container" style="max-width: 1080px; margin-bottom: 80px;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px;">
+            
+            <!-- Article 1 -->
+            <article style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
+                        <span class="feature-tag" style="margin-bottom: 0;">Productivity Tools</span>
+                        <span style="font-size: 12px; font-family: 'JetBrains Mono', monospace; color: var(--text-muted);">6 min read</span>
+                    </div>
+                    <h2 style="font-size: 18.5px; font-weight: 700; color: var(--text); line-height: 1.35; margin-bottom: 12px; letter-spacing: -0.01em;">
+                        <a href="best-app-blockers-android.html" style="color: var(--text);">Best App Blockers for Android in 2026: Tested Comparison</a>
+                    </h2>
+                    <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px;">
+                        Compare top-rated Android app blockers including FocusPort, AppBlock, StayFree, and Freedom to find the right strictness level for your goals.
+                    </p>
+                </div>
+                <a href="best-app-blockers-android.html" style="font-size: 13.5px; font-weight: 600; color: var(--accent-text); display: inline-flex; align-items: center; gap: 6px;">
+                    Read Article</a>
+            </article>
+
+            <!-- Article 2 -->
+            <article style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
+                        <span class="feature-tag" style="margin-bottom: 0;">Behavioral Guide</span>
+                        <span style="font-size: 12px; font-family: 'JetBrains Mono', monospace; color: var(--text-muted);">5 min read</span>
+                    </div>
+                    <h2 style="font-size: 18.5px; font-weight: 700; color: var(--text); line-height: 1.35; margin-bottom: 12px; letter-spacing: -0.01em;">
+                        <a href="how-to-stop-doomscrolling.html" style="color: var(--text);">How to Stop Doomscrolling on Social Media</a>
+                    </h2>
+                    <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px;">
+                        Are Reels, Shorts, and TikTok scrolling loops eating your day? Learn the cognitive mechanics of scrolling and practical techniques to break the cycle.
+                    </p>
+                </div>
+                <a href="how-to-stop-doomscrolling.html" style="font-size: 13.5px; font-weight: 600; color: var(--accent-text); display: inline-flex; align-items: center; gap: 6px;">
+                    Read Guide</a>
+            </article>
+
+            <!-- Article 3 -->
+            <article style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
+                        <span class="feature-tag" style="margin-bottom: 0;">Digital Wellbeing</span>
+                        <span style="font-size: 12px; font-family: 'JetBrains Mono', monospace; color: var(--text-muted);">7 min read</span>
+                    </div>
+                    <h2 style="font-size: 18.5px; font-weight: 700; color: var(--text); line-height: 1.35; margin-bottom: 12px; letter-spacing: -0.01em;">
+                        <a href="dopamine-detox-guide.html" style="color: var(--text);">Dopamine Detox Guide: Reset Focus</a>
+                    </h2>
+                    <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px;">
+                        Reset your attention baseline. Learn how a structured digital detox can help reduce compulsive stimulation and restore deep focus.
+                    </p>
+                </div>
+                <a href="dopamine-detox-guide.html" style="font-size: 13.5px; font-weight: 600; color: var(--accent-text); display: inline-flex; align-items: center; gap: 6px;">
+                    Read Guide</a>
+            </article>
+
+            <!-- Article 4 -->
+            <article style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
+                        <span class="feature-tag" style="margin-bottom: 0;">Workstation Setup</span>
+                        <span style="font-size: 12px; font-family: 'JetBrains Mono', monospace; color: var(--text-muted);">6 min read</span>
+                    </div>
+                    <h2 style="font-size: 18.5px; font-weight: 700; color: var(--text); line-height: 1.35; margin-bottom: 12px; letter-spacing: -0.01em;">
+                        <a href="how-to-block-apps-on-windows-pc.html" style="color: var(--text);">How to Block Distracting Apps &amp; Websites on Windows PC</a>
+                    </h2>
+                    <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px;">
+                        Eliminate computer distractions, close background game clients (Steam/Discord), and lock down distracting browser tabs during deep work.
+                    </p>
+                </div>
+                <a href="how-to-block-apps-on-windows-pc.html" style="font-size: 13.5px; font-weight: 600; color: var(--accent-text); display: inline-flex; align-items: center; gap: 6px;">
+                    Read Guide</a>
+            </article>
+
+            <!-- Article 5 -->
+            <article style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
+                        <span class="feature-tag" style="margin-bottom: 0;">Exam Strategy</span>
+                        <span style="font-size: 12px; font-family: 'JetBrains Mono', monospace; color: var(--text-muted);">5 min read</span>
+                    </div>
+                    <h2 style="font-size: 18.5px; font-weight: 700; color: var(--text); line-height: 1.35; margin-bottom: 12px; letter-spacing: -0.01em;">
+                        <a href="how-to-lock-phone-during-study-and-exams.html" style="color: var(--text);">How to Lock Your Phone During Study &amp; Exams</a>
+                    </h2>
+                    <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px;">
+                        Overcome the urge to check your phone during difficult study blocks. Set up a strict study lock with essential app allowlists.
+                    </p>
+                </div>
+                <a href="how-to-lock-phone-during-study-and-exams.html" style="font-size: 13.5px; font-weight: 600; color: var(--accent-text); display: inline-flex; align-items: center; gap: 6px;">
+                    Read Guide</a>
+            </article>
+
+            <!-- Article 6 -->
+            <article style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
+                        <span class="feature-tag" style="margin-bottom: 0;">Android Focus</span>
+                        <span style="font-size: 12px; font-family: 'JetBrains Mono', monospace; color: var(--text-muted);">6 min read</span>
+                    </div>
+                    <h2 style="font-size: 18.5px; font-weight: 700; color: var(--text); line-height: 1.35; margin-bottom: 12px; letter-spacing: -0.01em;">
+                        <a href="app-blocker-for-android.html" style="color: var(--text);">Strict App Blocker for Android: Setup &amp; Guide</a>
+                    </h2>
+                    <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px;">
+                        Why traditional timer apps fail and how Device Administrator uninstall protection enforces genuine deep work on Android devices.
+                    </p>
+                </div>
+                <a href="app-blocker-for-android.html" style="font-size: 13.5px; font-weight: 600; color: var(--accent-text); display: inline-flex; align-items: center; gap: 6px;">
+                    Read Guide</a>
+            </article>
+
+        </div>
+    </main>
+
     <!-- FOOTER -->
-    <footer>
-        <div class="footer-brand">FocusPort</div>
-        <ul class="footer-links">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../features.html">Features</a></li>
-            <li><a href="../students.html">For Students</a></li>
-            <li><a href="../professionals.html">For Professionals</a></li>
-            <li><a href="index.html">Blog</a></li>
-            <li><a href="https://focusport.github.io/focusport-privacy/" target="_blank" rel="noopener">Privacy Policy</a></li>
-            <li><a href="mailto:support@focusport.in">Contact</a></li>
-        </ul>
-        <div class="footer-copy">© 2026 FocusPort. Available on Android.</div>
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="nav-logo-icon">
+                        <img src="../app-logo.webp" alt="FocusPort" / width="28" height="28" decoding="async">
+                    </div>
+                    <span class="footer-brand-name">FocusPort</span>
+                    <p class="footer-brand-desc">Free strict app blocker for Android and Windows. Support replies within 24 hours.</p>
+                </div>
+                <div class="footer-nav-cols">
+                    <div class="footer-col">
+                        <div class="footer-col-title">Product</div>
+                        <ul>
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="../features.html">Features</a></li>
+                            <li><a href="https://apps.microsoft.com/detail/9N03JG4MTC2V?hl=en-us&gl=IN&ocid=pdpshare" target="_blank" rel="noopener" class="btn-windows">available on the Microsoft Store</a></li>
+                            <li><a href="https://play.google.com/store/apps/details?id=com.focusport.app" target="_blank" rel="noopener">Google Play</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <div class="footer-col-title">Use Cases</div>
+                        <ul>
+                            <li><a href="../students.html">For Students</a></li>
+                            <li><a href="../professionals.html">For Professionals</a></li>
+                            <li><a href="how-to-lock-phone-during-study-and-exams.html">Study Lock Guide</a></li>
+                            <li><a href="how-to-stop-doomscrolling.html">Stop Doomscrolling</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <div class="footer-col-title">Resources &amp; Legal</div>
+                        <ul>
+                            <li><a href="index.html">Blog</a></li>
+                            <li><a href="../faq.html">FAQ</a></li>
+                            <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                            <li><a href="../contact.html">Contact Support</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 FocusPort. All rights reserved.</span>
+                <span>support@focusport.in</span>
+            </div>
+        </div>
     </footer>
 
-    <!-- SCRIPTS -->
+    <!-- available on the Microsoft Store LEAD CAPTURE MODAL -->
+    
+
     <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenuBtn.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
-            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
-        });
+        // THEME CONTROLLER & NAVIGATION
+        (function() {
+            function getTheme() {
+                return document.documentElement.dataset.theme || 
+                    (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            }
 
-        // Close mobile menu on click
-        document.querySelectorAll('.mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenuBtn.classList.remove('active');
-                mobileMenu.classList.remove('active');
-                document.body.style.overflow = '';
+            function updateThemeUI(theme) {
+                document.documentElement.dataset.theme = theme;
+                const isDark = theme === 'dark';
+                const label = isDark ? 'Switch to light mode' : 'Switch to dark mode';
+                const pressed = isDark ? 'true' : 'false';
+                
+                document.querySelectorAll('.theme-toggle').forEach(btn => {
+                    btn.setAttribute('aria-label', label);
+                    btn.setAttribute('aria-pressed', pressed);
+                });
+
+                const metaTheme = document.querySelector('meta[name="theme-color"]');
+                if (metaTheme) {
+                    metaTheme.setAttribute('content', isDark ? '#0F1115' : '#FAFAF9');
+                }
+            }
+
+            function toggleTheme() {
+                const current = getTheme();
+                const next = current === 'dark' ? 'light' : 'dark';
+                try {
+                    localStorage.setItem('focusport_theme', next);
+                } catch(e) {}
+                document.documentElement.classList.add('theme-transition');
+                updateThemeUI(next);
+                setTimeout(() => {
+                    document.documentElement.classList.remove('theme-transition');
+                }, 250);
+            }
+
+            // Init UI state
+            updateThemeUI(getTheme());
+
+            // Listen to toggle clicks
+            document.querySelectorAll('.theme-toggle').forEach(btn => {
+                btn.addEventListener('click', toggleTheme);
             });
-        });
 
-        // Navbar scrolled background
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
+            // Listen to system preference changes if no manual override stored
+            if (window.matchMedia) {
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+                    try {
+                        if (!localStorage.getItem('focusport_theme')) {
+                            updateThemeUI(e.matches ? 'dark' : 'light');
+                        }
+                    } catch(err) {}
+                });
+            }
+
+            // HEADER SCROLL (rAF throttled)
+            const headerEl = document.querySelector('.site-header');
+            if (headerEl) {
+                let ticking = false;
+                window.addEventListener('scroll', () => {
+                    if (!ticking) {
+                        window.requestAnimationFrame(() => {
+                            if (window.scrollY > 8) {
+                                headerEl.classList.add('scrolled');
+                            } else {
+                                headerEl.classList.remove('scrolled');
+                            }
+                            ticking = false;
+                        });
+                        ticking = true;
+                    }
+                }, { passive: true });
+            }
+
+            // MOBILE FULL-SCREEN SHEET
+            const mobileToggle = document.getElementById('mobileToggle');
+            const mobileNav = document.getElementById('mobileNav');
+            if (mobileToggle && mobileNav) {
+                function openMobileMenu() {
+                    mobileNav.classList.add('open');
+                    mobileNav.removeAttribute('hidden');
+                    mobileNav.setAttribute('aria-hidden', 'false');
+                    mobileToggle.setAttribute('aria-expanded', 'true');
+                    document.body.style.overflow = 'hidden';
+                }
+                function closeMobileMenu() {
+                    mobileNav.classList.remove('open');
+                    mobileNav.setAttribute('hidden', '');
+                    mobileNav.setAttribute('aria-hidden', 'true');
+                    mobileToggle.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                }
+                mobileToggle.addEventListener('click', () => {
+                    const isOpen = mobileNav.classList.contains('open');
+                    if (isOpen) closeMobileMenu();
+                    else openMobileMenu();
+                });
+                document.querySelectorAll('.mobile-nav a').forEach(link => {
+                    link.addEventListener('click', closeMobileMenu);
+                });
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && mobileNav.classList.contains('open')) {
+                        closeMobileMenu();
+                        mobileToggle.focus();
+                    }
+                });
+                window.addEventListener('resize', () => {
+                    if (window.innerWidth >= 1024 && mobileNav.classList.contains('open')) {
+                        closeMobileMenu();
+                    }
+                });
+            }
+        })();
+
+        
+        // IMAGE FADE-IN (PREVENT CLS & SMOOTH ENTRANCE)
+        document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+            if (img.complete) {
+                img.classList.add('loaded');
             } else {
-                navbar.classList.remove('scrolled');
+                img.addEventListener('load', () => img.classList.add('loaded'), { once: true });
             }
         });
-
-        // Intersection Observer for scroll reveal
-        const revealObserver = new IntersectionObserver((entries) => {
-            entries.forEach(e => {
-                if (e.isIntersecting) {
-                    e.target.classList.add('visible');
-                    revealObserver.unobserve(e.target);
-                }
+        // Theme Toggle Functionality
+        const themeToggleBtns = document.querySelectorAll('.theme-toggle');
+        function updateThemeToggleUI(theme) {
+            themeToggleBtns.forEach(btn => {
+                const isDark = theme === 'dark';
+                btn.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+                btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
             });
-        }, { threshold: 0.08, rootMargin: '0px 0px -24px 0px' });
+        }
 
-        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+        // Set initial toggle UI state
+        const currentTheme = document.documentElement.dataset.theme || 'dark';
+        updateThemeToggleUI(currentTheme);
+
+        themeToggleBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const isDark = document.documentElement.dataset.theme === 'dark';
+                const newTheme = isDark ? 'light' : 'dark';
+                document.documentElement.dataset.theme = newTheme;
+                try {
+                    localStorage.setItem('focusport_theme', newTheme);
+                } catch(e) {}
+                const themeColor = newTheme === 'dark' ? '#0F1115' : '#FAFAF9';
+                const meta = document.querySelector('meta[name="theme-color"]');
+                if (meta) meta.setAttribute('content', themeColor);
+                updateThemeToggleUI(newTheme);
+            });
+        });
+
     </script>
 </body>
 </html>
