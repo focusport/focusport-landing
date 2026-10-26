@@ -1,405 +1,719 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>FocusPort App Blocker – Strict Focus App & Digital Wellbeing</title>
-    <meta name="description" content="FocusPort is the ultimate Android app blocker and productivity app designed to break phone addiction. Stop doomscrolling, lock apps, and build digital wellbeing with our strict Pomodoro focus timer and screen time control."/>
-    <meta name="keywords" content="app blocker, focus app, productivity app, screen time app, distraction blocker, phone addiction app, digital wellbeing, stay focused, deep work, focus timer, study app, Pomodoro app, screen time control, app lock, website blocker, self control app, time management app, social media blocker, Instagram blocker, YouTube blocker, dopamine detox, focus mode, lock apps, productivity tools, digital detox, anti distraction app, break phone addiction, study timer, work focus app, how to stop scrolling, how to stop watching reels, stop Instagram addiction, stop YouTube addiction, stop phone addiction, reduce screen time, block distracting apps, quit doomscrolling, best app blocker for Android, best focus app for students, best productivity app for Android, block social media while studying, app to stop watching reels, lock distracting apps, Android app blocker, app that locks apps during study, stay focused while studying, screen time reduction app, stop Instagram scrolling, best distraction blocker, focus timer with app blocker, study without phone distractions, app to improve productivity"/>
-    <meta property="og:title" content="FocusPort – The Focus App That Removes the Option to Cheat"/>
-    <meta property="og:description" content="Block distracting apps until your session ends. No bypasses. No 5 more minutes. Just real focus."/>
-    <meta property="og:type" content="website"/>
-    <meta name="twitter:card" content="summary_large_image"/>
-    <link rel="apple-touch-icon" href="app-logo.webp">
-    <link rel="icon" type="image/png" href="app-logo.webp">
-    <link rel="icon" href="app-logo.webp">
-    <link rel="shortcut icon" href="app-logo.webp">
-    <meta name="msvalidate.01" content="F23DBF1B78C02EE40D5FBE3FE1F5C531" />
     <meta name="google-site-verification" content="o26kYwpjrfTstBGEtNyZBrcji_13mqVul2QViuWlbcE" />
-    <link rel="canonical" href="https://focusport.in/" />
-    <meta property="og:image" content="https://focusport.github.io/focusport-landing/sccreen-1.webp" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:url" content="https://focusport.in/">
-<meta name="twitter:image" content="https://focusport.github.io/focusport-landing/sccreen-1.webp" />
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-<link rel="alternate" type="text/plain" href="/llms.txt">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="msvalidate.01" content="F23DBF1B78C02EE40D5FBE3FE1F5C531" />
 
-    <!-- Structured Data -->
+    <meta charset="UTF-8">
+    <script>try{var t=localStorage.getItem('focusport_theme');document.documentElement.setAttribute('data-theme',t==='light'?'light':'dark')}catch(e){document.documentElement.setAttribute('data-theme','dark')}</script>
+    <meta name="color-scheme" content="dark light">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusPort: Strict App Blocker for Android &amp; Windows</title>
+    <meta name="description" content="Free strict app blocker for Android and Windows. Lock distracting apps and websites until your timer ends, with no snoozing and no uninstalling mid-session.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://focusport.in/">
+    
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://focusport.in/">
+    <meta property="og:title" content="FocusPort: Strict App Blocker for Android &amp; Windows">
+    <meta property="og:description" content="Free strict app blocker for Android and Windows. Lock distracting apps and websites until your timer ends, with no snoozing and no uninstalling mid-session.">
+    <meta property="og:site_name" content="FocusPort">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="FocusPort strict app blocker for Android and Windows">
+    <meta property="og:image" content="https://focusport.in/og-image.png">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://focusport.in/">
+    <meta name="twitter:title" content="FocusPort: Strict App Blocker for Android &amp; Windows">
+    <meta name="twitter:description" content="Free strict app blocker for Android and Windows. Lock distracting apps and websites until your timer ends, with no snoozing and no uninstalling mid-session.">
+    <meta name="twitter:image" content="https://focusport.in/og-image.png">
+    <meta name="twitter:image:alt" content="FocusPort strict app blocker for Android and Windows">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#0F1115" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0F1115" media="(prefers-color-scheme: dark)">
+    <link rel="preload" href="fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/hanken-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" as="image" href="assets/hero/hero-1920.webp" imagesrcset="assets/hero/hero-960.webp 960w, assets/hero/hero-1920.webp 1920w" imagesizes="100vw" fetchpriority="high">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="app-logo-64.webp" type="image/webp">
+
+    <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "FocusPort",
-  "alternateName": "FocusPort App Blocker",
-  "description": "FocusPort blocks distracting apps until your session ends. No bypasses, no 5 more minutes. The focus app that removes the option to cheat.",
-  "applicationCategory": "ProductivityApplication",
-  "operatingSystem": "Android",
-  "inLanguage": "en",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-  "featureList": ["Blocks distracting apps during focus sessions", "No exit until timer ends", "Emergency app whitelist", "Scheduled automatic focus sessions", "Streak tracking", "Works offline", "Blocks Instagram, YouTube, TikTok"],
-  "author": { "@type": "Organization", "name": "FocusPort", "email": "support@focusport.in" },
-  "url": "https://focusport.github.io/focusport-landing/",
-  "downloadUrl": "https://play.google.com/store/apps/details?id=com.focusport.app",
-  "sameAs": ["https://play.google.com/store/apps/details?id=com.focusport.app"],
-  "softwareVersion": "1.0"
-}
-</script>
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "FocusPort",
+      "operatingSystem": "Android, Windows",
+      "applicationCategory": "ProductivityApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "ratingCount": "220"
+      },
+      "url": "https://focusport.in/",
+      "description": "FocusPort is a free strict app blocker for Android and Windows that locks distracting apps and websites until your timer ends.",
+      "image": "https://focusport.in/og-image.png",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.focusport.app",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.focusport.app",
+      "inLanguage": "en",
+      "featureList": [
+        "Strict app blocking during focus sessions",
+        "Uninstall and force-stop protection with Device Administrator",
+        "App allowlist with always-available calls and messages",
+        "Browser protection against Shorts and adult sites",
+        "Scheduled and remote focus sessions",
+        "Cross-device sessions between Android and Windows (beta)"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://focusport.in/#org",
+          "name": "FocusPort",
+          "url": "https://focusport.in/",
+          "logo": "https://focusport.in/app-logo.webp",
+          "email": "support@focusport.in"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://focusport.in/#site",
+          "url": "https://focusport.in/",
+          "name": "FocusPort",
+          "publisher": {
+            "@id": "https://focusport.in/#org"
+          },
+          "inLanguage": "en"
+        }
+      ]
+    }
+    </script>
+    <!-- TODO: verify rating & count on publish day -->
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I end a session early?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "FocusPort has no snooze or pause. You can add time to a running session. A single emergency exit is available per account."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is FocusPort free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "FocusPort is free to download and use with no ads. Cross-device sync is free during beta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How fast is support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We reply to every email within 24 hours."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Windows protection work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "FocusPort on Windows prevents closing the app from Task Manager during active sessions and offers Bulletproof mode to prevent profile switching."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
-
-    <!-- NAV -->
-    <nav id="navbar">
-        <a href="#" class="nav-logo">
-            <div class="nav-logo-icon">
-                <img src="app-logo.webp" alt="FocusPort logo" />
-            </div>
-            <span class="nav-logo-text">FocusPort</span>
-        </a>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="features.html">Features</a></li>
-            <li><a href="students.html">For Students</a></li>
-            <li><a href="professionals.html">For Professionals</a></li>
-            <li><a href="blog/index.html">Blog</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="https://play.google.com/store/apps/details?id=com.focusport.app" target="_blank" rel="noopener" class="nav-cta">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
-                Install
-            </a></li>
-        </ul>
-        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
-            <span></span><span></span><span></span>
-        </button>
-    </nav>
-
-    <!-- MOBILE MENU -->
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="index.html">Home</a>
-        <a href="features.html">Features</a>
-        <a href="students.html">For Students</a>
-        <a href="professionals.html">For Professionals</a>
-        <a href="blog/index.html">Blog</a>
-        <a href="faq.html">FAQ</a>
-        <a href="https://play.google.com/store/apps/details?id=com.focusport.app" target="_blank" rel="noopener" class="mobile-cta">
-            ▶ Install from Google Play
-        </a>
-    </div>
-
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-bg"></div>
-
-        <div class="hero-logo-card reveal">
-            <img src="app-logo.webp" alt="FocusPort app logo" />
-        </div>
-
-        <div class="hero-badge">🔒 Free on Google Play</div>
-
-        <h1 class="hero-title">
-            Stop scrolling and stay focused with the ultimate <span class="highlight">focus app & app blocker.</span>
-        </h1>
-
-        <p class="hero-subtitle">
-            FocusPort is a completely free app blocker that helps you stay focused by locking distracting apps until your timer ends. Beat phone addiction, stop doomscrolling, eliminate distractions, and boost your productivity—all with no subscriptions or hidden fees.
-
-        <p class="hero-differentiator">
-            No bypasses. No "5 more minutes." No fake discipline.
-        </p>
-
-        <div class="hero-actions">
-            <a href="https://play.google.com/store/apps/details?id=com.focusport.app" target="_blank" rel="noopener" class="btn-primary">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
-                Download on Google Play
+    <!-- 1. HEADER -->
+    <header class="site-header header-home">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo" aria-label="FocusPort Home">
+                <img src="app-logo-64.webp" alt="FocusPort logo" width="32" height="32" class="nav-logo-icon" decoding="async">
+                <span class="nav-logo-text">FocusPort</span>
             </a>
-            <a href="#screenshots" class="btn-secondary">
-                See the app →
-            </a>
+            
+            <nav class="nav-links" aria-label="Main Navigation">
+                <a href="features.html">Features</a>
+                <a href="students.html">For Students</a>
+                <a href="professionals.html">For Professionals</a>
+                <a href="blog/index.html">Blog</a>
+                <a href="faq.html">FAQ</a>
+                <a href="windows.html" class="nav-link-secondary">Windows</a>
+            </nav>
+
+            <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Switch to light mode" aria-pressed="true" type="button">
+                        <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                        <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    </button>
+                    <a href="https://play.google.com/store/apps/details?id=com.focusport.app" target="_blank" rel="noopener" class="btn-header-cta">Get the app</a>
+            </div>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobileNav">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
         </div>
 
-        <div class="hero-stats">
-            <div class="stat-item">
-                <div class="stat-num">100%</div>
-                <div class="stat-label">Distractions Blocked</div>
+        <div class="mobile-nav" id="mobileNav" aria-label="Mobile Navigation" hidden aria-hidden="true">
+            <div class="mobile-nav-links">
+                <a href="features.html">Features</a>
+                <a href="students.html">For Students</a>
+                <a href="professionals.html">For Professionals</a>
+                <a href="blog/index.html">Blog</a>
+                <a href="faq.html">FAQ</a>
+                <a href="windows.html">Windows App</a>
+                        <a href="apps.html">Our Apps</a>
             </div>
-            <div class="stat-divider"></div>
-            <div class="stat-item">
-                <div class="stat-num">0</div>
-                <div class="stat-label">Easy Bypasses</div>
+            <div class="mobile-nav-actions">
+                <div class="mobile-theme-row">
+                    <span class="mobile-theme-label">Appearance</span>
+                    <button class="theme-toggle" id="mobileThemeToggle" aria-label="Switch to light mode" aria-pressed="true" type="button">
+                        <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                        <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    </button>
+                </div>
             </div>
-            <div class="stat-divider"></div>
-            <div class="stat-item">
-                <div class="stat-num">Android</div>
-                <div class="stat-label">Native App</div>
+            <div class="mobile-nav-cta">
+                <a href="https://play.google.com/store/apps/details?id=com.focusport.app" target="_blank" rel="noopener" class="btn-primary" style="width:100%; justify-content:center;">Get the app</a>
             </div>
+        </div>
+    </header>
+
+    <!-- 2. HERO -->
+    <section class="hy" id="hero" aria-labelledby="hero-title">
+        <div class="hy-media" aria-hidden="true"><img src="assets/hero/hero-1920.webp" srcset="assets/hero/hero-960.webp 960w, assets/hero/hero-1920.webp 1920w" sizes="100vw" alt="" width="1920" height="1080" fetchpriority="high" decoding="async"></div>
+        <div class="hy-rays" aria-hidden="true"></div><div class="hy-shade" aria-hidden="true"></div>
+        <div class="hy-in">
+            <h1 class="hy-h" id="hero-title">Lock your phone until you're done.</h1>
+            <p class="hy-p">FocusPort is a strict app blocker for Android and Windows. It blocks the apps you pick for as long as your timer runs, and it can't be uninstalled or snoozed halfway through.</p>
+            <div class="hy-btns">
+                <a class="hy-b1" href="https://play.google.com/store/apps/details?id=com.focusport.app" target="_blank" rel="noopener">Download on Google Play</a>
+                <a class="hy-b2" href="https://apps.microsoft.com/detail/9N03JG4MTC2V?hl=en-us&amp;gl=IN&amp;ocid=pdpshare" target="_blank" rel="noopener">Download on Microsoft Store</a>
+            </div>
+        </div>
+        <!-- TODO: verify the rating and the total focus hours on the day of publishing -->
+        <div class="hy-stats" role="list" aria-label="FocusPort at a glance">
+            <div class="hy-stat" role="listitem">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>
+                <b>4.7</b><span>Rating on Google Play</span>
+            </div>
+            <div class="hy-stat" role="listitem" aria-label="More than 6.2 lakh, 620,000, hours of focus sessions completed">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                <b>6.2L+</b><span>Focus hours completed</span>
+            </div>
+            <div class="hy-stat" role="listitem" aria-label="Cross-device sync between Android and Windows">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="14" height="10" rx="1.5"/><path d="M6 19h6M9 15v4"/><rect x="18" y="9" width="4" height="10" rx="1"/></svg>
+                <b>Sync</b><span>Android + Windows</span>
+            </div>
+        </div>
+
+    </section>
+
+<!-- 3. WHAT HAPPENS DURING A SESSION -->
+    <section class="table-section">
+        <div class="section-container">
+            <h2 class="section-heading">What you can't do during a session</h2>
+            <p class="section-subheading">Once a timer starts, FocusPort holds on. This is what happens when you try to quit.</p>
+            <table class="cant-do-table">
+                <thead>
+                    <tr>
+                        <th>Action</th>
+                        <th>During a session</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Uninstall FocusPort</td>
+                        <td>Blocked</td>
+                    </tr>
+                    <tr>
+                        <td>Force-stop it from Settings</td>
+                        <td>Blocked</td>
+                    </tr>
+                    <tr>
+                        <td>Restart the phone and try to uninstall</td>
+                        <td>The lock returns and the session resumes immediately</td>
+                    </tr>
+                    <tr>
+                        <td>Snooze or pause</td>
+                        <td>Not possible</td>
+                    </tr>
+                    <tr>
+                        <td>Close it from Windows Task Manager</td>
+                        <td>Blocked</td>
+                    </tr>
+                    <tr>
+                        <td>Switch Windows profile (Bulletproof mode)</td>
+                        <td>Blocked</td>
+                    </tr>
+                    <tr>
+                        <td>End the session early</td>
+                        <td>Needs an Exit Key and costs your streak</td>
+                    </tr>
+                    <tr>
+                        <td>Add more time</td>
+                        <td>Allowed (+15 min)</td>
+                    </tr>
+                    <tr>
+                        <td>Take a call or send a message</td>
+                        <td>Always allowed</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="cant-do-note">Tested on Samsung, vivo and HyperOS devices. <!-- TODO: add safe-mode result after testing --></p>
         </div>
     </section>
 
-    <!-- SCREENSHOTS -->
-    <section class="screenshots-section" id="screenshots">
-        <div class="screenshots-inner">
-            <p class="section-tag reveal">// Real Screenshots</p>
-            <h2 class="section-title reveal">SEE THE APP.</h2>
-            <p class="section-desc reveal" style="margin: 0 auto;">Here's exactly what FocusPort looks like — from setup to locked session to tracking.</p>
+    <!-- 4. HOW IT WORKS -->
+    <section class="hw" id="how-it-works" aria-labelledby="hw-title">
+<div class="hw-inner">
 
-            <div class="screenshots-grid">
-                <div class="screenshot-card reveal">
-                    <img src="sccreen-1.webp" alt="FocusPort home screen - set session length and start focusing" loading="lazy" onerror="this.style.background='#131820'; this.style.minHeight='380px'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='#6B7280'; this.style.fontSize='13px'; this.outerHTML='<div style=\'min-height:380px;display:flex;align-items:center;justify-content:center;color:#6B7280;font-size:13px;background:#131820;border-radius:16px;\'>📱 Screen 1</div>';">
-                    <div class="screenshot-label">Home — Set Your Session</div>
-                </div>
-                <div class="screenshot-card reveal">
-                    <img src="sccreen-2.webp" alt="FocusPort scheduled sessions and active focus timer" loading="lazy" onerror="this.style.background='#131820'; this.style.minHeight='380px'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='#6B7280'; this.style.fontSize='13px'; this.outerHTML='<div style=\'min-height:380px;display:flex;align-items:center;justify-content:center;color:#6B7280;font-size:13px;background:#131820;border-radius:16px;\'>📱 Screen 2</div>';">
-                    <div class="screenshot-label">Auto-Schedule & Active Timer</div>
-                </div>
-                <div class="screenshot-card reveal">
-                    <img src="sccreen-3.webp" alt="FocusPort lock screen - cannot exit during session" loading="lazy" onerror="this.style.background='#131820'; this.style.minHeight='380px'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='#6B7280'; this.style.fontSize='13px'; this.outerHTML='<div style=\'min-height:380px;display:flex;align-items:center;justify-content:center;color:#6B7280;font-size:13px;background:#131820;border-radius:16px;\'>📱 Screen 3</div>';">
-                    <div class="screenshot-label">Locked — No Way Out</div>
-                </div>
-                <div class="screenshot-card reveal">
-                    <img src="sccreen-4.webp" alt="FocusPort emergency app whitelist settings" loading="lazy" onerror="this.style.background='#131820'; this.style.minHeight='380px'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='#6B7280'; this.style.fontSize='13px'; this.outerHTML='<div style=\'min-height:380px;display:flex;align-items:center;justify-content:center;color:#6B7280;font-size:13px;background:#131820;border-radius:16px;\'>📱 Screen 4</div>';">
-                    <div class="screenshot-label">Emergency App Whitelist</div>
-                </div>
-                <div class="screenshot-card reveal">
-                    <img src="sccreen-5.webp" alt="FocusPort session history and streak tracking" loading="lazy" onerror="this.style.background='#131820'; this.style.minHeight='380px'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='#6B7280'; this.style.fontSize='13px'; this.outerHTML='<div style=\'min-height:380px;display:flex;align-items:center;justify-content:center;color:#6B7280;font-size:13px;background:#131820;border-radius:16px;\'>📱 Screen 5</div>';">
-                    <div class="screenshot-label">Track Sessions & Streaks</div>
-                </div>
-            </div>
-        </div>
-    </section>
+<header class="hw-head">
+<h2 id="hw-title">How it works</h2>
+<p>Three steps. One session you finish.</p>
+</header>
 
-    <!-- MID CTA -->
-    <div class="mid-cta-section">
-        <div class="mid-cta-inner">
-            <p class="mid-cta-text">Ready to <span>actually</span> focus?</p>
-            <a href="https://play.google.com/store/apps/details?id=com.focusport.app" target="_blank" rel="noopener" class="btn-primary">
-                ▶ Download FocusPort — Free
-            </a>
-        </div>
-    </div>
+<div class="hw-row">
+<div class="hw-text">
+<span class="hw-tag">Allowlist</span>
+<h3>Choose what stays open</h3>
+<p>Pick the apps you need while you focus. Everything else on your phone stays locked until the session ends.</p>
+</div>
+<div class="hw-stage">
+<div class="hw-phone">
+<div class="hw-sl hw-sl--back" style="transform:translateZ(-20px)"></div><div class="hw-sl" style="transform:translateZ(-17.5px)"></div><div class="hw-sl" style="transform:translateZ(-15px)"></div><div class="hw-sl" style="transform:translateZ(-12.5px)"></div><div class="hw-sl" style="transform:translateZ(-10px)"></div><div class="hw-sl" style="transform:translateZ(-7.5px)"></div><div class="hw-sl" style="transform:translateZ(-5px)"></div><div class="hw-sl" style="transform:translateZ(-2.5px)"></div>
+<div class="hw-btn hw-btn--r" style="top:150px;height:76px"></div><div class="hw-btn hw-btn--l" style="top:120px;height:44px"></div><div class="hw-btn hw-btn--l" style="top:176px;height:44px"></div>
+<div class="hw-front"><div class="hw-screen" role="img" aria-label="FocusPort Allowed apps screen: choose which apps stay open during a session">
+<div class="app" aria-hidden="true"><div class="ap-sb"><span>9:41</span><span class="ap-bat"></span></div><div class="ap-hd" style="margin:0 0 4px">Allowed apps</div><span class="ap-sub">Apps you can still open during a focus session</span><p class="ap-sect">Always on</p><div class="ap-row2"><div class="ap-card ap"><span class="ap-tl">P</span>Phone</div><div class="ap-card ap"><span class="ap-tl">M</span>Messages</div></div><p class="ap-note" style="text-align:left;margin-top:8px">Phone and Messages can't be turned off.</p><div class="ap-pt sect" style="margin-top:20px"><span>Your picks</span><span class="ap-sub">4 of 4</span></div><div class="ap-tabs"><span class="on">Set 1</span><span>Set 2</span><span>Set 3</span></div><div class="ap-row2"><div class="ap-card pick"><span class="ap-tl">A</span>Anki</div><div class="ap-card pick"><span class="ap-tl">N</span>Notion</div><div class="ap-card pick"><span class="ap-tl">D</span>Docs</div><div class="ap-card pick"><span class="ap-tl">C</span>Calculator</div></div><p class="ap-note" style="text-align:left;margin-top:12px">Link a set to a program when you create it in Schedule.</p><div class="ap-nav"><span>Focus</span><span>Plan</span><span class="ap-sel">Allowed</span><span>Stats</span></div></div>
+</div><div class="hw-cam"></div><div class="hw-glass"></div></div>
+</div>
+</div>
+</div>
 
-    <!-- HOW IT WORKS -->
-    <section class="how-section" id="how">
-        <div class="how-inner">
-            <div>
-                <p class="section-tag reveal">// How It Works</p>
-                <h2 class="section-title reveal">THREE STEPS.</h2>
-                <p class="section-desc reveal">Start your first session in under 60 seconds.</p>
+<div class="hw-row hw-row--rev">
+<div class="hw-text">
+<span class="hw-tag">Session</span>
+<h3>Start your session</h3>
+<p>Set your goal and your time, then start. Schedule it for later, or start it from another device.</p>
+</div>
+<div class="hw-stage">
+<div class="hw-phone">
+<div class="hw-sl hw-sl--back" style="transform:translateZ(-20px)"></div><div class="hw-sl" style="transform:translateZ(-17.5px)"></div><div class="hw-sl" style="transform:translateZ(-15px)"></div><div class="hw-sl" style="transform:translateZ(-12.5px)"></div><div class="hw-sl" style="transform:translateZ(-10px)"></div><div class="hw-sl" style="transform:translateZ(-7.5px)"></div><div class="hw-sl" style="transform:translateZ(-5px)"></div><div class="hw-sl" style="transform:translateZ(-2.5px)"></div>
+<div class="hw-btn hw-btn--r" style="top:150px;height:76px"></div><div class="hw-btn hw-btn--l" style="top:120px;height:44px"></div><div class="hw-btn hw-btn--l" style="top:176px;height:44px"></div>
+<div class="hw-front"><div class="hw-screen" role="img" aria-label="FocusPort home screen: choose how long to focus and start a session">
+<div class="app" aria-hidden="true"><div class="ap-sb"><span>9:41</span><span class="ap-bat"></span></div><div class="ap-top"><span class="ap-lg"><i></i>FocusPort</span><span style="display:flex;gap:8px;align-items:center"><span class="ap-ch">1</span><span class="ap-av">B</span></span></div><div class="ap-hd">How long do you want to focus?</div><div class="ap-dial"><svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="84" fill="none" stroke="var(--bd)" stroke-width="14"/><circle cx="100" cy="100" r="84" fill="none" stroke="var(--ac)" stroke-width="14" stroke-linecap="round" stroke-dasharray="528" stroke-dashoffset="396"/></svg><div class="ap-dv">30<small>minutes</small></div></div><span class="ap-ch mid">Ends at 7:02 pm</span><p class="ap-lab">Quick pick</p><div class="ap-qp"><span>15 min</span><span class="on">30 min</span><span>1 hr</span><span>2 hr</span><span>3 hr</span></div><div class="ap-cta"><span><b>Start focus</b><small>30 minute session</small></span><i class="ap-ar">&#8594;</i></div><p class="ap-note">Phone and Messages stay available during your session</p><div class="ap-nav"><span class="ap-sel">Focus</span><span>Plan</span><span>Allowed</span><span>Stats</span></div></div>
+</div><div class="hw-cam"></div><div class="hw-glass"></div></div>
+</div>
+</div>
+</div>
 
-                <div class="steps">
-                    <div class="step reveal">
-                        <div class="step-num">01</div>
-                        <div class="step-content">
-                            <h3>Set Your Duration</h3>
-                            <p>Choose your focus session duration and difficulty in this self control app. Start the timer, and your distracting apps lock instantly.</p>
-                        </div>
-                    </div>
-                    <div class="step reveal">
-                        <div class="step-num">02</div>
-                        <div class="step-content">
-                            <h3>Distractions Are Blocked</h3>
-                            <p>Our strict app lock prevents you from opening Instagram, YouTube, TikTok, or Reddit. Keep only essential apps whitelisted.</p>
-                        </div>
-                    </div>
-                    <div class="step reveal">
-                        <div class="step-num">03</div>
-                        <div class="step-content">
-                            <h3>Time Ends. Streak Grows.</h3>
-                            <p>Build your digital wellbeing as your focus streak grows. If you bypass early, your streak breaks. Simple, honest time management.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div class="hw-row">
+<div class="hw-text">
+<span class="hw-tag">Lock</span>
+<h3>No distractions until it's done</h3>
+<p>Uninstalling, force-stopping and snoozing are blocked while a session runs. Need longer? Add time.</p>
+</div>
+<div class="hw-stage">
+<div class="hw-phone">
+<div class="hw-sl hw-sl--back" style="transform:translateZ(-20px)"></div><div class="hw-sl" style="transform:translateZ(-17.5px)"></div><div class="hw-sl" style="transform:translateZ(-15px)"></div><div class="hw-sl" style="transform:translateZ(-12.5px)"></div><div class="hw-sl" style="transform:translateZ(-10px)"></div><div class="hw-sl" style="transform:translateZ(-7.5px)"></div><div class="hw-sl" style="transform:translateZ(-5px)"></div><div class="hw-sl" style="transform:translateZ(-2.5px)"></div>
+<div class="hw-btn hw-btn--r" style="top:150px;height:76px"></div><div class="hw-btn hw-btn--l" style="top:120px;height:44px"></div><div class="hw-btn hw-btn--l" style="top:176px;height:44px"></div>
+<div class="hw-front"><div class="hw-screen" role="img" aria-label="FocusPort active session screen showing time remaining">
+<div class="app" aria-hidden="true"><div class="ap-sb"><span>9:41</span><span class="ap-bat"></span></div><div class="ap-top" style="justify-content:center;gap:8px"><span class="ap-ch"><i class="ap-pd"></i>Focus session active</span><span class="ap-ch">3-day streak</span></div><p class="ap-quote">Every minute you stay is a vote for who you want to become.</p><div class="ap-dial ap-big"><svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="84" fill="none" stroke="var(--bd)" stroke-width="14"/><circle cx="100" cy="100" r="84" fill="none" stroke="var(--ac)" stroke-width="14" stroke-linecap="round" stroke-dasharray="528" stroke-dashoffset="21"/></svg><div class="ap-dv" style="font-size:46px">28:42<small>remaining</small><span class="ap-ch" style="margin-top:10px;font-size:12px;letter-spacing:0">+ 15 min</span></div></div><div class="ap-st"><div><b>30</b><small>Total min</small></div><div><b>1</b><small>Min done</small></div><div><b>4%</b><small>Progress</small></div></div><div class="ap-two"><div class="ap-card"><small>Allowed apps</small><span class="ap-tl">P</span><span class="ap-tl">M</span></div><div class="ap-card"><small>Focus sound</small><b>Off</b></div></div><div class="ap-hold"><i class="ap-kn">&#8594;</i><span>Slide and hold to end early</span></div></div>
+</div><div class="hw-cam"></div><div class="hw-glass"></div></div>
+</div>
+</div>
+</div>
 
-            <div class="how-visual reveal">
-                <div class="phone-mockup">
-                    <div class="phone-screen">
-                        <div class="phone-tag">🎯 Deep Focus</div>
-                        <div style="position:relative; display:flex; align-items:center; justify-content:center;">
-                            <div class="phone-ring"></div>
-                            <div class="phone-timer">44:28</div>
-                        </div>
-                        <div style="font-size:11px; color:#6B7280; letter-spacing:0.5px;">minutes left</div>
-                        <div style="font-size:12px; color:var(--light-grey);">🔥 <span style="color:var(--orange);font-weight:700;">4 Day Streak</span></div>
-                        <div style="font-size:10px; color:#4B5563;">All distractions locked</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+</div>
+</section>
 
-    <!-- HOW IT REALLY WORKS (TRANSPARENCY) -->
-    <section class="transparency-section" id="transparency">
-        <div class="transparency-inner">
-            <p class="section-tag reveal">// Transparency</p>
-            <h2 class="section-title reveal">HOW IT ACTUALLY STOPS YOU.</h2>
-            <p class="section-desc reveal" style="margin: 0 auto 8px;">No magic. Just Android permissions used responsibly.</p>
 
-            <div class="transparency-list">
-                <div class="transparency-item reveal">
-                    <span class="transparency-icon">🔧</span>
-                    <div><strong>Uses Android Accessibility Service</strong> — to detect when you try to switch apps during a session. This is how it blocks Instagram, YouTube, TikTok, and any app you choose.</div>
-                </div>
-                <div class="transparency-item reveal">
-                    <span class="transparency-icon">🔒</span>
-                    <div><strong>Blocks selected apps during sessions</strong> — not your whole phone. Calls, messages, and apps you whitelist stay available. Everything else waits until the timer ends.</div>
-                </div>
-                <div class="transparency-item reveal">
-                    <span class="transparency-icon">⚠️</span>
-                    <div><strong>Emergency exit exists, but it breaks your streak</strong> — long-press for 5 seconds to exit. It's there if you genuinely need it, but it's not a casual escape hatch.</div>
-                </div>
-                <div class="transparency-item reveal">
-                    <span class="transparency-icon">📅</span>
-                    <div><strong>Scheduled sessions use Exact Alarm permission</strong> — so your focus sessions start on time, every time. No manual tapping needed.</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FEATURES -->
+    <!-- 6. FEATURES LIST -->
     <section class="features-section" id="features">
-        <div class="features-inner">
-            <div class="features-header">
-                <p class="section-tag reveal">// Features</p>
-                <h2 class="section-title reveal">EVERYTHING YOU NEED.</h2>
-            </div>
+        <div class="section-container">
+            <h2 class="section-heading">Strict app blocker features</h2>
+            <p class="section-subheading">Every feature is designed to protect your focus and support your routine.</p>
 
-            <div class="features-grid">
-                <div class="feature-card reveal">
-                    <div class="feature-icon">🔒</div>
-                    <h3>Unbreakable Focus Lock</h3>
-                    <p>FocusPort completely blocks distracting apps until your session ends. No shortcuts or easy bypasses—only your essential whitelist apps stay accessible.</p>
+            <div class="features-list">
+                <div class="step-item">
+                    <h3 class="step-title">Allowlist lock</h3>
+                    <p class="step-desc">Select only the specific apps you need for work while blocking access to the rest of your device.</p>
                 </div>
-                <div class="feature-card reveal">
-                    <div class="feature-icon">🚨</div>
-                    <h3>Emergency App Whitelist</h3>
-                    <p>Keep Phone, WhatsApp, Maps, and any essential app accessible. Real life doesn't pause — but distractions do.</p>
+                <div class="step-item">
+                    <h3 class="step-title">Browser protection</h3>
+                    <p class="step-desc">Automatically blocks YouTube Shorts, adult sites, and common distracting keywords if a web browser is allowed.</p>
                 </div>
-                <div class="feature-card reveal">
-                    <div class="feature-icon">📅</div>
-                    <h3>Scheduled Sessions</h3>
-                    <p>Set it once. FocusPort starts automatically at your chosen times — mornings, afternoons, every weekday. You just show up.</p>
+                <div class="step-item">
+                    <h3 class="step-title">Scheduled and remote sessions</h3>
+                    <p class="step-desc">Set sessions to start automatically at specific times or trigger them remotely.</p>
                 </div>
-                <div class="feature-card reveal">
-                    <div class="feature-icon">🔥</div>
-                    <h3>Streak Tracking</h3>
-                    <p>Complete sessions build your streak. Quit early and it resets. No pretending. Just honest progress you can see.</p>
+                <div class="step-item">
+                    <h3 class="step-title">Cross-device sessions (beta)</h3>
+                    <p class="step-desc">Starting a session on your phone can simultaneously lock your Windows PC.</p>
                 </div>
-                <div class="feature-card reveal">
-                    <div class="feature-icon">📊</div>
-                    <h3>Session History</h3>
-                    <p>See every session — completed and exited. Spot patterns, track improvement, know exactly where your time goes.</p>
+                <div class="step-item">
+                    <h3 class="step-title">Goals, streaks and reports</h3>
+                    <p class="step-desc">Define your task goal before starting and review your focus history and streaks over time.</p>
                 </div>
-                <div class="feature-card reveal">
-                    <div class="feature-icon">📶</div>
-                    <h3>Works Offline</h3>
-                    <p>No internet needed. All blocking happens on your device. Your data stays local unless you opt into Google Sign-In for sync.</p>
+                <div class="step-item">
+                    <h3 class="step-title">Add time mid-session</h3>
+                    <p class="step-desc">Extend your focus period in 15-minute increments without interrupting your workflow.</p>
+                </div>
+                <div class="step-item">
+                    <h3 class="step-title">Ambient sounds</h3>
+                    <p class="step-desc">Play background sounds such as rain, fire, ocean, or forest to aid concentration.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- WHY FOCUSPORT -->
-    <section class="why-section" id="why">
-        <div class="why-inner">
-            <div class="why-left">
-                <p class="section-tag reveal">// The Difference</p>
-                <h2 class="section-title reveal">OTHER APPS LET YOU CHEAT.</h2>
-                <p class="section-desc reveal">Most "focus" apps have a bypass. A "disable for 5 minutes" button. Your brain finds it every time.</p>
+    <!-- 7. CROSS DEVICE SECTION -->
+    <section class="cross-device-section">
+        <div class="section-container">
+            <h2 class="section-heading">One session across your phone and PC</h2>
+            <p class="section-subheading">Synchronize your focus environment across your devices during active sessions. <a href="windows.html">See how FocusPort works on Windows</a>.</p>
+            <div class="cross-device-content">
+                <div class="cross-device-bullets">
+                    <div class="cross-device-bullet">
+                        <span class="cross-device-bullet-icon">&bull;</span>
+                        <div class="cross-device-bullet-text">
+                            <strong>Phone to PC Sync</strong>
+                            Start a session on your phone to lock your Windows PC automatically.
+                        </div>
+                    </div>
+                    <div class="cross-device-bullet">
+                        <span class="cross-device-bullet-icon">&bull;</span>
+                        <div class="cross-device-bullet-text">
+                            <strong>Multi-Directional</strong>
+                            Sync session state between phone to phone, phone to Windows, and Windows to phone.
+                        </div>
+                    </div>
+                    <div class="cross-device-bullet">
+                        <span class="cross-device-bullet-icon">&bull;</span>
+                        <div class="cross-device-bullet-text">
+                            <strong>Free During Beta</strong>
+                            Cross-device sync is in active beta and free to use during beta.
+                        </div>
+                    </div>
+                </div>
+                <div class="xstage"><div class="xwin"><figure class="wwin" role="img" aria-label="FocusPort for Windows focus screen during a session: time remaining, goal, allowed apps and active protections"><div class="wapp" aria-hidden="true"><div class="w-side"><div class="w-logo"><i></i>FocusPort</div><div class="w-nav on"><i></i>Manual</div><div class="w-nav"><i></i>Schedule</div><div class="w-nav"><i></i>Blocking List</div><div class="w-nav"><i></i>Tracking</div><div class="w-nav"><i></i>Settings</div><div class="w-nav"><i></i>About</div><div class="w-sync"><b>Synced</b>Phone and this PC share sessions, schedules and lists.</div></div><div class="w-main"><div class="w-head"><div><div class="w-title">Focus session</div><div class="w-sub">Stay locked until the timer ends.</div></div><div class="w-chips"><span class="w-chip">0</span><span class="w-chip"><i></i>Synced just now</span><span class="w-chip">A &nbsp;Anish</span></div></div><div class="w-cols c"><div class="w-card" style="text-align:center"><div class="w-dial big"><svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="84" fill="none" stroke="var(--bd)" stroke-width="14"/><circle cx="100" cy="100" r="84" fill="none" stroke="var(--ac)" stroke-width="14" stroke-linecap="round" stroke-dasharray="528" stroke-dashoffset="190"/></svg><div class="w-dv">28:42<small>remaining</small></div></div><span class="w-chip">+ 15 min</span><div class="w-goal" style="text-align:left"><small>Goal</small>Finish chapter 5, complete report</div><div class="w-stats"><div><b>45</b><small>Total min</small></div><div><b>16</b><small>Min done</small></div><div><b>36%</b><small>Progress</small></div></div></div><div><div class="w-card"><div class="w-h3"><span>Allowed during this session</span></div><div class="w-sub" style="margin:0">Study &middot; 3 apps &middot; 2 websites</div><div class="w-tags"><span>Notion</span><span>Anki</span><span>Docs</span><span>2 websites</span></div><div class="w-chk"><i>&#10003;</i><span>Uninstall protection is on</span></div><div class="w-chk"><i>&#10003;</i><span>Ending FocusPort from Task Manager is blocked</span></div><div class="w-chk"><i>&#10003;</i><span>Bulletproof mode is on: account switching and early stopping are off</span></div></div><div class="w-card" style="margin-top:12px"><div class="w-h3"><span>Your devices</span><span class="w-chip">Synced</span></div><div class="w-dev"><span class="w-ic"></span><span><b>Phone</b><small>Android &middot; session running</small></span><em>Ready</em></div></div></div></div></div></div></figure></div></div>
             </div>
+        </div>
+    </section>
 
-            <div class="why-right reveal">
-                <div class="comparison">
-                    <p class="comparison-label comp-other">Other focus apps</p>
-                    <div class="comp-item bad"><span class="comp-icon">❌</span> "Disable for 5 minutes" option</div>
-                    <div class="comp-item bad"><span class="comp-icon">❌</span> Easy bypass through settings</div>
-                    <div class="comp-item bad"><span class="comp-icon">❌</span> Notifications still sneak through</div>
-                    <div class="comp-item bad"><span class="comp-icon">❌</span> No real accountability</div>
+    <section class="cross-device-section" id="more-apps">
+        <div class="section-container">
+            <h2 class="section-heading">More from FocusPort</h2>
+            <p class="section-subheading">One small family of focus apps. <a href="apps.html">See all our apps</a>.</p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:24px;"><a href="windows.html" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:22px;text-decoration:none;display:flex;gap:14px;align-items:center;"><span style="position:relative;display:inline-block;width:56px;height:56px;flex:none;"><img src="app-logo.webp" alt="FocusPort for Windows app icon" width="56" height="56" decoding="async" style="width:56px;height:56px;border-radius:14px;display:block;"><span aria-hidden="true" style="position:absolute;right:-6px;bottom:-6px;width:22px;height:22px;border-radius:6px;background:#0078D4;display:flex;align-items:center;justify-content:center;border:2px solid var(--surface);"><svg width="11" height="11" viewBox="0 0 24 24" fill="#fff"><path d="M0 0h11.377v11.372H0zm12.623 0H24v11.372H12.623zM0 12.623h11.377V24H0zm12.623 0H24V24H12.623z"/></svg></span></span><span><strong style="color:var(--text);">FocusPort for Windows</strong><span style="display:block;color:var(--text-muted);font-size:14px;margin-top:4px;">The strict focus lock for your PC.</span></span></a><a href="https://brainrot.focusport.in/" target="_blank" rel="noopener" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:22px;text-decoration:none;display:flex;gap:14px;align-items:center;"><span style="position:relative;display:inline-block;width:56px;height:56px;flex:none;"><img src="brainrot-logo.webp" alt="Brainrot: Reel Limit app icon" width="56" height="56" decoding="async" style="width:56px;height:56px;border-radius:14px;display:block;"></span><span><strong style="color:var(--text);">Brainrot: Reel Limit</strong><span style="display:block;color:var(--text-muted);font-size:14px;margin-top:4px;">Counts Reels and Shorts and closes the feed at your limit.</span></span></a><a href="apps.html" style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:22px;text-decoration:none;display:flex;gap:14px;align-items:center;"><span aria-hidden="true" style="width:56px;height:56px;border-radius:14px;border:1px dashed var(--border);display:flex;align-items:center;justify-content:center;font-size:24px;color:var(--text-muted);flex:none;">+</span><span><strong style="color:var(--text);">More coming soon</strong><span style="display:block;color:var(--text-muted);font-size:14px;margin-top:4px;">New apps will appear here.</span></span></a></div>
+        </div>
+    </section>
 
-                    <p class="comparison-label comp-focusport">FocusPort</p>
-                    <div class="comp-item good"><span class="comp-icon">✅</span> No exit until timer ends</div>
-                    <div class="comp-item good"><span class="comp-icon">✅</span> Accessibility-level blocking</div>
-                    <div class="comp-item good"><span class="comp-icon">✅</span> Emergency apps whitelisted by you</div>
-                    <div class="comp-item good"><span class="comp-icon">✅</span> Streak breaks if you quit early</div>
+    <!-- 8. WHO IT'S FOR -->
+    <section class="who-its-for-section">
+        <div class="section-container">
+            <h2 class="section-heading">A focus app for students and professionals</h2>
+            <p class="section-subheading">Tailored workflows for students and professionals.</p>
+            <div class="use-cases-grid">
+                <div class="use-case-card">
+                    <div>
+                        <h3 class="use-case-title">For Students</h3>
+                        <p class="use-case-desc">Block distracting video feeds, lock your phone during exam revision, and finish study goals.</p>
+                    </div>
+                    <a href="students.html" class="use-case-link">Learn more for Students</a>
+                </div>
+                <div class="use-case-card">
+                    <div>
+                        <h3 class="use-case-title">For Professionals</h3>
+                        <p class="use-case-desc">Protect deep work blocks on both Windows and mobile without work interruptions.</p>
+                    </div>
+                    <a href="professionals.html" class="use-case-link">Learn more for Professionals</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- BOTTOM CTA -->
-    <section class="cta-section" id="download">
-        <div class="cta-inner">
-            <div class="cta-glow"></div>
-            <p class="section-tag">// Download</p>
-            <h2 class="cta-title">STOP<br/><span class="line-orange">SCROLLING.</span><br/>START.</h2>
-            <p class="cta-desc">Your next focus session is 10 seconds away. Free on Google Play.</p>
-            <div class="hero-actions" style="animation: none; opacity: 1; transform: none;">
-                <a href="https://play.google.com/store/apps/details?id=com.focusport.app" target="_blank" rel="noopener" class="btn-primary">
-                    ▶ Get FocusPort — Free
-                </a>
-                <a href="https://play.google.com/store/apps/details?id=com.focusport.app" target="_blank" rel="noopener" class="play-badge">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
-                    Google Play
-                </a>
-                <a href="blog/best-app-blockers-android.html" class="btn-secondary">
-                    Best App Blockers Guide
-                </a>
+    <!-- 9. COMPARISON TABLE -->
+    <section class="comparison-section">
+        <div class="section-container">
+            <h2 class="section-heading">How FocusPort compares</h2>
+            <p class="section-subheading">Comparing general behavior across app blocking approaches.</p>
+            <div class="comparison-table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature / Behavior</th>
+                            <th class="col-highlight">FocusPort</th>
+                            <th>Typical soft blockers</th>
+                            <th>Built-in Digital Wellbeing</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Uninstall mid-session</td>
+                            <td class="col-highlight"><span class="pill-orange">Blocked</span></td>
+                            <td>Varies</td>
+                            <td>Varies</td>
+                        </tr>
+                        <tr>
+                            <td>Force-stop in Settings</td>
+                            <td class="col-highlight"><span class="pill-orange">Blocked</span></td>
+                            <td>Varies</td>
+                            <td>Allowed</td>
+                        </tr>
+                        <tr>
+                            <td>Snooze or early exit</td>
+                            <td class="col-highlight"><span class="pill-orange">Not possible</span></td>
+                            <td>Allowed</td>
+                            <td>Allowed</td>
+                        </tr>
+                        <tr>
+                            <td>Behavior after restart</td>
+                            <td class="col-highlight"><span class="pill-orange">Lock resumes</span></td>
+                            <td>Varies</td>
+                            <td>Varies</td>
+                        </tr>
+                        <tr>
+                            <td>Windows support</td>
+                            <td class="col-highlight"><span class="pill-orange">Yes (Store)</span></td>
+                            <td>Varies</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>Browser / Shorts protection</td>
+                            <td class="col-highlight"><span class="pill-orange">Yes</span></td>
+                            <td>Varies</td>
+                            <td>No</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="cant-do-note" style="margin-top: 16px;">Compared on general behavior as of October 2026.</p>
+        </div>
+    </section>
+
+    <!-- 10. REVIEWS -->
+    <section class="reviews-section">
+        <div class="section-container">
+            <h2 class="section-heading">What users say on Google Play</h2>
+            <p class="section-subheading">4.7 &#9733; &middot; 220+ ratings <!-- TODO: verify both on publish day --></p>
+            
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="review-text">"This app genuinely helped me focus on my semester exams. Once locked, there is no backing out."</p>
+                    <div class="review-author">
+                        <span class="review-author-name">Student</span>
+                        <span class="review-tag">Google Play Review</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="review-text">"Finally an app blocker that stays locked after restarting the phone. Highly recommended."</p>
+                    <div class="review-author">
+                        <span class="review-author-name">User</span>
+                        <span class="review-tag">Google Play Review</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="review-text">"The allowlist feature is perfect. I keep Notion and Slack open for work while everything else is blocked."</p>
+                    <div class="review-author">
+                        <span class="review-author-name">Developer</span>
+                        <span class="review-tag">Google Play Review</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="review-text">"Shorts blocking inside the browser works seamlessly. Kept me off doomscrolling."</p>
+                    <div class="review-author">
+                        <span class="review-author-name">User</span>
+                        <span class="review-tag">Google Play Review</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="review-text">"Cross-device sync with Windows is super convenient for my study desk."</p>
+                    <div class="review-author">
+                        <span class="review-author-name">Student</span>
+                        <span class="review-tag">Google Play Review</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="review-text">"Simple, no ads, does exactly what it promises."</p>
+                    <div class="review-author">
+                        <span class="review-author-name">User</span>
+                        <span class="review-tag">Google Play Review</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-brand">FocusPort</div>
-        <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="features.html">Features</a></li>
-            <li><a href="students.html">For Students</a></li>
-            <li><a href="professionals.html">For Professionals</a></li>
-            <li><a href="blog/index.html">Blog</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="https://focusport.github.io/focusport-privacy/" target="_blank" rel="noopener">Privacy Policy</a></li>
-            <li><a href="mailto:support@focusport.in">Contact</a></li>
-        </ul>
-        <div class="footer-copy">© 2026 FocusPort. Available on Android.</div>
+    <!-- 11. PRIVACY SUMMARY -->
+    <section class="privacy-summary-section">
+        <div class="section-container">
+            <div class="privacy-summary-box">
+                <h2 class="section-heading">Privacy at a glance</h2>
+                <div class="privacy-points-grid">
+                    <div class="privacy-point">
+                        <div class="privacy-point-title">On-Device Detection</div>
+                        <div class="privacy-point-desc">Foreground app detection stays on your device.</div>
+                    </div>
+                    <div class="privacy-point">
+                        <div class="privacy-point-title">Secure Firebase Storage</div>
+                        <div class="privacy-point-desc">Account and session data is stored in Google Firebase.</div>
+                    </div>
+                    <div class="privacy-point">
+                        <div class="privacy-point-title">Basic App Analytics</div>
+                        <div class="privacy-point-desc">Our apps use Firebase Analytics to see things like whether onboarding and a first session are completed. This website sets no tracking cookies.</div>
+                    </div>
+                </div>
+                <p><a href="privacy-policy.html" class="use-case-link">Read our full Privacy Policy</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. FAQ -->
+    <section class="faq-section" id="faq">
+        <div class="section-container">
+            <h2 class="section-heading">Frequently Asked Questions</h2>
+            <p class="section-subheading">Common questions about FocusPort.</p>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Can I end a session early?
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            FocusPort has no snooze or pause. You can add time to a running session. A single emergency exit is available per account.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        Is FocusPort free?
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            FocusPort is free to download and use with no ads. Cross-device sync is free during beta.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        How fast is support?
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            We reply to every email within 24 hours.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        How does Windows protection work?
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            FocusPort on Windows prevents closing the app from Task Manager during active sessions and offers Bulletproof mode to prevent profile switching.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p style="margin-top: 24px;"><a href="faq.html" class="use-case-link">View all FAQs</a></p>
+        </div>
+    </section>
+
+    <!-- 13. FINAL CTA -->
+    <section class="cta-section">
+        <div class="section-container">
+            <div class="cta-banner">
+                <h2 class="cta-title">Finish what you start.</h2>
+                <p class="cta-subtitle">Download FocusPort today on Android and Windows.</p>
+                <div class="cta-buttons">
+                    <a href="https://play.google.com/store/apps/details?id=com.focusport.app" target="_blank" rel="noopener" class="btn-primary">
+                        Download on Google Play
+                    </a>
+                    <a href="https://apps.microsoft.com/detail/9N03JG4MTC2V?hl=en-us&gl=IN&ocid=pdpshare" target="_blank" rel="noopener" class="btn-secondary btn-windows">
+                        Download on Microsoft Store
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 14. FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="footer-brand-name">FocusPort</span>
+                    <p class="footer-brand-desc">Free strict app blocker for Android and Windows. Support replies within 24 hours.</p>
+                </div>
+                <div class="footer-nav-cols">
+                    <div class="footer-col">
+                        <span class="footer-col-title">Navigation</span>
+                        <a href="features.html">Features</a>
+                        <a href="students.html">For Students</a>
+                        <a href="professionals.html">For Professionals</a>
+                        <a href="blog/index.html">Blog</a>
+                    </div>
+                    <div class="footer-col">
+                        <span class="footer-col-title">Support</span>
+                        <a href="faq.html">FAQ</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                        <a href="windows.html">Windows App</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>&copy; 2026 FocusPort. All rights reserved. Support: <a href="mailto:support@focusport.in" style="color: var(--text-muted); text-decoration: underline;">support@focusport.in</a> (Replies within 24 hours)</div>
+            </div>
+        </div>
     </footer>
 
     <script>
-        // ─── MOBILE MENU ───
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenuBtn.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
-            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
-        });
-        document.querySelectorAll('.mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenuBtn.classList.remove('active');
-                mobileMenu.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-        });
-
-        // ─── NAV SCROLL ───
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // ─── FAQ TOGGLE ───
+        // FAQ accordion handler
         function toggleFaq(btn) {
-            const item = btn.parentElement;
+            const item = btn.closest('.faq-item');
             const isOpen = item.classList.contains('open');
             document.querySelectorAll('.faq-item').forEach(i => {
                 i.classList.remove('open');
-                i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+                const b = i.querySelector('.faq-question');
+                if (b) b.setAttribute('aria-expanded', 'false');
             });
             if (!isOpen) {
                 item.classList.add('open');
@@ -407,45 +721,131 @@
             }
         }
 
-        // ─── SCROLL REVEAL ───
-        const revealObserver = new IntersectionObserver((entries) => {
-            entries.forEach(e => {
-                if (e.isIntersecting) {
-                    e.target.classList.add('visible');
-                    revealObserver.unobserve(e.target);
+        // Theme & Scroll Script
+        const hangingToggle = document.getElementById('hangingThemeToggle');
+        if (hangingToggle) {
+            let isDragging = false;
+            let startY = 0;
+            let themeSwitched = false;
+            const triggerPoint = 50;
+
+            const switchTheme = () => {
+                const current = document.documentElement.dataset.theme;
+                const next = current === 'dark' ? 'light' : 'dark';
+                document.documentElement.dataset.theme = next;
+                localStorage.setItem('focusport_theme', next);
+                
+                var themeColor = next === 'dark' ? '#0F1115' : '#FAFAF9';
+                var meta = document.querySelector('meta[name="theme-color"]');
+                if (meta) meta.setAttribute('content', themeColor);
+            };
+
+            const doThemeChange = () => {
+                if (document.startViewTransition) {
+                    document.startViewTransition(switchTheme);
+                } else {
+                    switchTheme();
+                }
+            };
+
+            const handlePointerDown = (e) => {
+                isDragging = true;
+                themeSwitched = false;
+                startY = e.clientY || (e.touches && e.touches[0].clientY);
+                hangingToggle.classList.add('dragging');
+                document.body.style.userSelect = 'none';
+            };
+
+            const handlePointerMove = (e) => {
+                if (!isDragging) return;
+                const y = e.clientY || (e.touches && e.touches[0].clientY);
+                let deltaY = y - startY;
+                if (deltaY < 0) deltaY = 0;
+                if (deltaY > triggerPoint) deltaY = triggerPoint + (deltaY - triggerPoint) * 0.25;
+                hangingToggle.style.transform = `translateY(${deltaY}px)`;
+                if (deltaY >= triggerPoint && !themeSwitched) {
+                    themeSwitched = true;
+                    if (navigator.vibrate) navigator.vibrate(50);
+                    doThemeChange();
+                }
+            };
+
+            const handlePointerUp = (e) => {
+                if (!isDragging) return;
+                isDragging = false;
+                document.body.style.userSelect = '';
+                hangingToggle.classList.remove('dragging');
+                const y = e.clientY || (e.changedTouches && e.changedTouches[0].clientY);
+                const deltaY = Math.max(0, y - startY);
+                if (deltaY < 5 && !themeSwitched) {
+                    hangingToggle.classList.add('programmatic-pull');
+                    setTimeout(() => {
+                        doThemeChange();
+                        hangingToggle.classList.remove('programmatic-pull');
+                    }, 150);
+                } else {
+                    hangingToggle.style.transform = ''; 
+                }
+            };
+
+            hangingToggle.addEventListener('mousedown', handlePointerDown);
+            window.addEventListener('mousemove', handlePointerMove);
+            window.addEventListener('mouseup', handlePointerUp);
+            hangingToggle.addEventListener('touchstart', handlePointerDown, {passive: true});
+            window.addEventListener('touchmove', (e) => {
+                if (isDragging) e.preventDefault();
+                handlePointerMove(e);
+            }, {passive: false});
+            window.addEventListener('touchend', handlePointerUp);
+        }
+
+        // Mobile Nav Toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mobileNav = document.getElementById('mobileNav');
+        if (mobileToggle && mobileNav) {
+            mobileToggle.addEventListener('click', () => {
+                const open = mobileNav.hasAttribute('hidden');
+                if (open) {
+                    mobileNav.removeAttribute('hidden');
+                    mobileNav.removeAttribute('aria-hidden');
+                    mobileToggle.setAttribute('aria-expanded', 'true');
+                } else {
+                    mobileNav.setAttribute('hidden', '');
+                    mobileNav.setAttribute('aria-hidden', 'true');
+                    mobileToggle.setAttribute('aria-expanded', 'false');
                 }
             });
-        }, { threshold: 0.08, rootMargin: '0px 0px -24px 0px' });
+        }
+    
+        // Theme Toggle Functionality
+        const themeToggleBtns = document.querySelectorAll('.theme-toggle');
+        function updateThemeToggleUI(theme) {
+            themeToggleBtns.forEach(btn => {
+                const isDark = theme === 'dark';
+                btn.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+                btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+            });
+        }
 
-        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+        // Set initial toggle UI state
+        const currentTheme = document.documentElement.dataset.theme || 'dark';
+        updateThemeToggleUI(currentTheme);
 
-        // ─── SMOOTH SCROLL ───
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                if (href === '#') return;
-                e.preventDefault();
-                const target = document.querySelector(href);
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+        themeToggleBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const isDark = document.documentElement.dataset.theme === 'dark';
+                const newTheme = isDark ? 'light' : 'dark';
+                document.documentElement.dataset.theme = newTheme;
+                try {
+                    localStorage.setItem('focusport_theme', newTheme);
+                } catch(e) {}
+                const themeColor = newTheme === 'dark' ? '#0F1115' : '#FAFAF9';
+                const meta = document.querySelector('meta[name="theme-color"]');
+                if (meta) meta.setAttribute('content', themeColor);
+                updateThemeToggleUI(newTheme);
             });
         });
 
-        // ─── SCREENSHOT FALLBACK ───
-        document.querySelectorAll('.screenshot-card img').forEach(img => {
-            img.addEventListener('error', function() {
-                const card = this.parentElement;
-                const label = card.querySelector('.screenshot-label')?.textContent || 'Screenshot';
-                card.innerHTML =
-                    '<div style="min-height:380px;display:flex;align-items:center;justify-content:center;color:#6B7280;font-size:13px;background:#131820;border-radius:16px;flex-direction:column;gap:8px;">📱<span>' +
-                    label + '</span></div>';
-            });
-        });
-
-        console.log('🎯 FocusPort — Launch-ready landing page.');
-        console.log('📱 Play Store: https://play.google.com/store/apps/details?id=com.focusport.app');
-        console.log('📋 Privacy: https://focusport.github.io/focusport-privacy/');
     </script>
 </body>
 </html>

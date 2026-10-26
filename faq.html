@@ -1,229 +1,757 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FAFAF9">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0F1115">
+    <meta name="color-scheme" content="light dark">
     <meta charset="UTF-8"/>
+    <script>try{var t=localStorage.getItem('focusport_theme');document.documentElement.setAttribute('data-theme',t==='light'?'light':'dark')}catch(e){document.documentElement.setAttribute('data-theme','dark')}</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>FocusPort FAQ | Questions About App Blocking and Focus Sessions</title>
-    <meta name="description" content="Browse all FocusPort frequently asked questions about app blocking, permissions, student use, emergency access, pricing, and device compatibility."/>
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <title>FocusPort FAQ: App Blocking, Uninstall Protection, Windows</title>
+    <meta name="description" content="Answers about FocusPort: how strict app blocking works, uninstall protection, allowlists, the Windows app, supported phones, privacy and support."/>
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://focusport.in/faq.html" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="FocusPort FAQ: App Blocking, Uninstall Protection, Windows"/>
+    <meta property="og:description" content="Answers about FocusPort: how strict app blocking works, uninstall protection, allowlists, the Windows app, supported phones, privacy and support."/>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://focusport.in/faq.html"/>
+    <meta property="og:site_name" content="FocusPort">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="FocusPort strict app blocker for Android and Windows">
+    <meta property="og:image" content="https://focusport.in/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="FocusPort FAQ: App Blocking, Uninstall Protection, Windows"/>
+    <meta name="twitter:description" content="Answers about FocusPort: how strict app blocking works, uninstall protection, allowlists, the Windows app, supported phones, privacy and support."/>
+    <meta name="twitter:image" content="https://focusport.in/og-image.png" />
+    <meta name="twitter:image:alt" content="FocusPort strict app blocker for Android and Windows">
+    <link rel="apple-touch-icon" href="app-logo.webp">
+    <link rel="icon" type="image/png" href="app-logo.webp">
+    <link rel="icon" href="app-logo.webp">
+    <noscript><style>img[loading="lazy"] { opacity: 1 !important; }</style></noscript>
+        <script>
+        (function() {
+            try {
+                var savedTheme = localStorage.getItem('focusport_theme');
+                var theme = savedTheme ? savedTheme : 'dark';
+                document.documentElement.dataset.theme = theme;
+                var themeColor = theme === 'dark' ? '#0F1115' : '#FAFAF9';
+                var meta = document.querySelector('meta[name="theme-color"]');
+                if (meta) meta.setAttribute('content', themeColor);
+            } catch(e) {}
+        })();
+    </script>
     <link rel="stylesheet" href="styles.css"/>
+
+    <!-- Structured Data (All 14 FAQ Questions Synchronized) -->
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What makes FocusPort a strict blocker for Windows?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It removes the usual escape routes during a session: Task Manager is disabled by Windows policy, Settings and Control Panel are closed, Bulletproof mode blocks switching Windows profiles, several background parts restart each other, and the session resumes after a restart. Allowlist mode adds a rule that anything you did not allow stays blocked."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I uninstall FocusPort during a focus session?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not easily. Windows Settings and the classic Control Panel are closed while a session is running, and the service keeps the app's files in use, so uninstalling mid-session is not practical. After the session ends you can remove it normally."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is FocusPort an alternative to Freedom or Cold Turkey on Windows?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is a free option aimed at the same job, with Allowlist and Blocklist modes, schedules and cross-device sessions with Android. Freedom and Cold Turkey are established tools with their own platforms and pricing, so compare what you need. Our comparison guide is at /blog/freedom-alternative-windows-android.html."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does FocusPort sync between my Windows PC and my phone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Sessions, schedules and lists are shared between FocusPort for Windows and FocusPort for Android, and a session started on one can start on the other. Cross-device sync is in beta and free during beta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need internet for a focus session to stay locked?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Blocking runs on each device, so a lost connection does not end a session. Internet is only needed for optional cloud sync between devices."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between Allowlist mode and Blocklist mode?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Blocklist mode blocks the apps and websites you list. Allowlist mode blocks everything except the apps and websites you list, which leaves no unlisted app to switch to."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I end a session early?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "FocusPort has no snooze or pause. You can add time to a running session. A single emergency exit is available per account."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is FocusPort free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "FocusPort is free to download and use with no ads. Cross-device sync is free during beta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How fast is support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We reply to every email within 24 hours."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Windows protection work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "FocusPort on Windows prevents closing the app from Task Manager during active sessions and offers Bulletproof mode to prevent profile switching."
+          }
+        }
+      ]
+    }
+    </script>
+
 </head>
 <body>
-    <nav id="navbar">
-        <a href="#" class="nav-logo">
-            <div class="nav-logo-icon">
-                <img src="app-logo.webp" alt="FocusPort logo" />
+
+    <!-- 1. PLAIN TOP BAR NAVIGATION -->
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="app-logo-64.webp" alt="FocusPort logo" width="32" height="32" class="nav-logo-icon" decoding="async">
+                <span class="nav-logo-text">FocusPort</span>
+            </a>
+            
+            <div class="nav-right">
+                <nav class="nav-links" aria-label="Main Navigation">
+                    <a href="features.html">Features</a>
+                    <a href="students.html">For Students</a>
+                    <a href="professionals.html">For Professionals</a>
+                    <a href="blog/index.html">Blog</a>
+                    <a href="faq.html" class="active" aria-current="page">FAQ</a>
+                </nav>
+                <div class="nav-actions">
+                    <a href="windows.html" class="nav-link-secondary">Windows</a>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode" aria-pressed="false" type="button">
+                        <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                        <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    </button>
+                    <a href="https://play.google.com/store/apps/details?id=com.focusport.app" target="_blank" rel="noopener" class="btn-header-cta">Get the app</a>
+                </div>
             </div>
-            <span class="nav-logo-text">FocusPort</span>
-        </a>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="features.html">Features</a></li>
-            <li><a href="students.html">For Students</a></li>
-            <li><a href="professionals.html">For Professionals</a></li>
-            <li><a href="blog/index.html">Blog</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="https://play.google.com/store/apps/details?id=com.focusport.app" target="_blank" rel="noopener" class="nav-cta">Install</a></li>
-        </ul>
-        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
-            <span></span><span></span><span></span>
-        </button>
-    </nav>
 
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="index.html">Home</a>
-        <a href="features.html">Features</a>
-        <a href="students.html">For Students</a>
-        <a href="professionals.html">For Professionals</a>
-        <a href="blog/index.html">Blog</a>
-        <a href="faq.html">FAQ</a>
-        <a href="https://play.google.com/store/apps/details?id=com.focusport.app" target="_blank" rel="noopener" class="mobile-cta">▶ Install from Google Play</a>
-    </div>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobileNav">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
 
-    <main style="padding-top: 120px;">
-        <section class="faq-section" style="padding: 40px 24px 100px;">
-            <div class="faq-inner" style="max-width: 1100px; margin: 0 auto;">
-                <p class="section-tag">// FAQ</p>
-                <h1 class="section-title" style="margin-bottom: 24px;">ALL YOUR QUESTIONS.<br/>ANSWERED.</h1>
-                <p class="section-desc" style="margin: 0 auto 36px; max-width: 700px;">Here is a complete list of the most common questions about FocusPort, grouped by topic so it is easier to scan and understand.</p>
+        <div class="mobile-nav" id="mobileNav" aria-label="Mobile Navigation" hidden aria-hidden="true">
+            <div class="mobile-nav-links">
+                <a href="features.html">Features</a>
+                <a href="students.html">For Students</a>
+                <a href="professionals.html">For Professionals</a>
+                <a href="blog/index.html">Blog</a>
+                <a href="faq.html" class="active" aria-current="page">FAQ</a>
+                <a href="windows.html">Windows</a>
+            </div>
+            <div class="mobile-nav-actions">
+                <div class="mobile-theme-row">
+                    <span class="mobile-theme-label">Appearance</span>
+                    <button class="theme-toggle" id="mobileThemeToggle" aria-label="Switch to dark mode" aria-pressed="false" type="button">
+                        <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                        <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    </button>
+                </div>
+                <a href="https://play.google.com/store/apps/details?id=com.focusport.app" target="_blank" rel="noopener" class="mobile-cta-btn">Get the app</a>
+                <a href="https://apps.microsoft.com/detail/9N03JG4MTC2V?hl=en-us&gl=IN&ocid=pdpshare" target="_blank" rel="noopener" class="mobile-win-btn btn-windows">Download for Windows</a>
+            </div>
+        </div>
+    </header>
 
-                <div class="faq-support-card">
-                    <h3>Need more help?</h3>
-                    <p>Have a question that is not covered here? Send us an email at <a href="mailto:support@focusport.in">support@focusport.in</a> and we will get back to you.</p>
+    <!-- 2. PAGE HERO -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <h1 class="hero-title">Frequently asked questions. Clear answers.</h1>
+            <p class="hero-subtitle">Find answers to questions about FocusPort permissions, security, device compatibility, and strict session enforcement.</p>
+            
+            <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 16px 20px; max-width: 600px; margin: 24px auto 0; font-size: 14px; color: var(--text-muted);">
+                Need additional assistance? Reach out to our team at <a href="mailto:support@focusport.in" style="color: var(--accent-text); font-weight: 600; text-decoration: underline;">support@focusport.in</a>.
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. ACCORDION CATEGORIES -->
+    <section class="faq-section" style="padding-top: 40px;">
+        <div class="section-container" style="max-width: 820px;">
+            
+            <!-- Category 1: Getting Started & Focus Sessions -->
+            <div class="faq-group" style="margin-bottom: 36px;">
+                <h2 style="font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 14px; letter-spacing: -0.01em;">1. Getting Started &amp; Focus Sessions</h2>
+                <div class="faq-list" style="margin-top: 32px; max-width: 800px;">
+
+                <div class="faq-item" style="margin-bottom: 24px;">
+                    <h3 style="font-size: 18px; margin-bottom: 8px;">Can I end a session early?</h3>
+                    <p style="color: var(--text-muted); font-size: 15px; margin: 0;">FocusPort has no snooze or pause. You can add time to a running session. A single emergency exit is available per account.</p>
+                </div>
+                <div class="faq-item" style="margin-bottom: 24px;">
+                    <h3 style="font-size: 18px; margin-bottom: 8px;">Is FocusPort free?</h3>
+                    <p style="color: var(--text-muted); font-size: 15px; margin: 0;">FocusPort is free to download and use with no ads. Cross-device sync is free during beta.</p>
+                </div>
+                <div class="faq-item" style="margin-bottom: 24px;">
+                    <h3 style="font-size: 18px; margin-bottom: 8px;">How fast is support?</h3>
+                    <p style="color: var(--text-muted); font-size: 15px; margin: 0;">We reply to every email within 24 hours.</p>
                 </div>
 
-                <div class="faq-category-block">
-                    <h2 class="faq-category-title">Getting started</h2>
-                    <div class="faq-list">
-                        <div class="faq-item">
-                            <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-                                Can I really not exit during a session?
-                                <span class="faq-arrow">↓</span>
-                            </button>
-                            <div class="faq-a">Correct. Once a session starts, FocusPort uses Android's Accessibility Service to detect and block attempts to switch to blocked apps. The only way out is to long-press the exit button for 5 full seconds — and doing so marks your session as incomplete and breaks your streak.</div>
-                        </div>
-                        <div class="faq-item">
-                            <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-                                Can FocusPort block Instagram, YouTube, and TikTok?
-                                <span class="faq-arrow">↓</span>
-                            </button>
-                            <div class="faq-a">Yes. You choose which apps to block. Instagram, YouTube, TikTok, Twitter, Reddit — any app on your phone can be added to the blocked list. During a session, they're completely inaccessible.</div>
-                        </div>
-                        <div class="faq-item">
-                            <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-                                What makes FocusPort different from Forest?
-                                <span class="faq-arrow">↓</span>
-                            </button>
-                            <div class="faq-a">Forest uses gamification and guilt (killing a tree). FocusPort uses actual blocking — you physically cannot open the apps you've blocked. Forest lets you exit anytime; FocusPort doesn't. Different approaches for different needs.</div>
-                        </div>
-                        <div class="faq-item">
-                            <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-                                Does FocusPort work offline?
-                                <span class="faq-arrow">↓</span>
-                            </button>
-                            <div class="faq-a">Yes. All blocking happens on your device. No internet connection needed for sessions to work. Google Sign-In is optional and only used if you want to sync your streak across devices.</div>
-                        </div>
-                        <div class="faq-item">
-                            <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-                                Is FocusPort free?
-                                <span class="faq-arrow">↓</span>
-                            </button>
-                            <div class="faq-a">Yes — FocusPort is completely free to use. Enjoy focus locking, app blocking, scheduled sessions, and all core features at no cost. There are no hidden charges or subscription required.</div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                            <span>Can I really not exit during a session?</span>
+                            <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Correct. Once a session begins, FocusPort uses system-level enforcement to keep you locked out of distracting apps until your timer expires. There are no "snooze for 5 minutes" shortcuts, and active-session uninstall protection on Android prevents removing the app to escape.
                         </div>
                     </div>
-                </div>
+                    </div>
 
-                <div class="faq-category-block">
-                    <h2 class="faq-category-title">For students and emergencies</h2>
-                    <div class="faq-list">
-                        <div class="faq-item">
-                            <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-                                Is FocusPort good for students?
-                                <span class="faq-arrow">↓</span>
-                            </button>
-                            <div class="faq-a">Definitely. Students are one of our main user groups. Block social media during study sessions, set automatic focus times during lectures, and track your study streaks. The emergency whitelist keeps Phone and campus apps accessible.</div>
-                        </div>
-                        <div class="faq-item">
-                            <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-                                What if I have a real emergency?
-                                <span class="faq-arrow">↓</span>
-                            </button>
-                            <div class="faq-a">The Emergency App whitelist is designed for this. Before any session, add apps you might genuinely need — Phone, WhatsApp, Maps, banking apps. Those stay fully accessible. Everything else is blocked until time ends.</div>
-                        </div>
-                        <div class="faq-item">
-                            <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-                                Can I bypass FocusPort?
-                                <span class="faq-arrow">↓</span>
-                            </button>
-                            <div class="faq-a">Not easily. Unlike other focus apps that let you disable them from settings, FocusPort uses Accessibility Service-level blocking. The only way out is the 5-second emergency exit — which breaks your streak. There's no "just this once" button.</div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                            <span>Can FocusPort block Instagram, YouTube, and TikTok?</span>
+                            <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Yes. You choose which apps to block on Android, and FocusPort for Windows can block distracting desktop apps and websites. During an active focus session, distracting apps and websites are blocked on open.
                         </div>
                     </div>
-                </div>
+                    </div>
 
-                <div class="faq-category-block">
-                    <h2 class="faq-category-title">Permissions and privacy</h2>
-                    <div class="faq-list">
-                        <div class="faq-item">
-                            <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-                                What permissions does it need?
-                                <span class="faq-arrow">↓</span>
-                            </button>
-                            <div class="faq-a">FocusPort needs Accessibility Service (to detect app switching and block it), Device Admin (to prevent uninstalling during sessions), and Exact Alarm (for scheduled sessions). These are necessary for real blocking — apps that ask for fewer permissions can be easily bypassed.</div>
-                        </div>
-                        <div class="faq-item">
-                            <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-                                Why does FocusPort need Accessibility permission?
-                                <span class="faq-arrow">↓</span>
-                            </button>
-                            <div class="faq-a">Android requires Accessibility Service for apps that need to detect and block other apps. FocusPort uses it only during focus sessions to prevent opening distracting apps. Without Accessibility permission, FocusPort cannot block apps.</div>
-                        </div>
-                        <div class="faq-item">
-                            <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-                                Does FocusPort collect my personal data?
-                                <span class="faq-arrow">↓</span>
-                            </button>
-                            <div class="faq-a">No. FocusPort does not access or store messages, passwords, photos, contacts, or personal files. The permission is used only for focus enforcement.</div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                            <span>How does cross-device focus work?</span>
+                            <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            When signed in to your account, FocusPort allows you to coordinate focus sessions across your connected Android and Windows devices, synchronizing your session state and streak progress.
                         </div>
                     </div>
-                </div>
+                    </div>
 
-                <div class="faq-category-block">
-                    <h2 class="faq-category-title">Device compatibility</h2>
-                    <div class="faq-list">
-                        <div class="faq-item">
-                            <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-                                Why do I need to enable Autostart on Xiaomi/Redmi/Poco devices?
-                                <span class="faq-arrow">↓</span>
-                            </button>
-                            <div class="faq-a">HyperOS may close background services automatically. Autostart allows FocusPort to continue running during an active focus session.</div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                            <span>Does FocusPort work offline?</span>
+                            <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Yes. Core app and website blocking happens directly on your device. You do not need an active internet connection for local focus sessions to enforce strict blocking.
                         </div>
-                        <div class="faq-item">
-                            <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
-                                Why does FocusPort work on some phones but not others?
-                                <span class="faq-arrow">↓</span>
-                            </button>
-                            <div class="faq-a">Android manufacturers modify Android with their own battery management systems. Samsung, Pixel, Xiaomi, Vivo, Oppo, and others handle background apps differently. Some devices require additional settings for reliable blocking.</div>
+                    </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                            <span>Is FocusPort free to use?</span>
+                            <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Yes. FocusPort is free to use. No subscription is required to access the core focus and blocking experience, including strict sessions, app blocking, the essential allowlist, active-session uninstall protection, scheduling, streak tracking, and Windows blocking.
                         </div>
+                    </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
 
-    <footer>
-        <div class="footer-brand">FocusPort</div>
-        <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="features.html">Features</a></li>
-            <li><a href="students.html">For Students</a></li>
-            <li><a href="professionals.html">For Professionals</a></li>
-            <li><a href="blog/index.html">Blog</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="https://focusport.github.io/focusport-privacy/" target="_blank" rel="noopener">Privacy Policy</a></li>
-            <li><a href="mailto:support@focusport.in">Contact</a></li>
-        </ul>
-        <div class="footer-copy">© 2026 FocusPort. Available on Android.</div>
+            <!-- Category 2: Permissions & Security -->
+            <div class="faq-group" style="margin-bottom: 36px;">
+                <h2 style="font-size: 18px; font-weight: 700; color: var(--white); margin-bottom: 14px; letter-spacing: -0.01em;">2. Permissions &amp; Privacy</h2>
+                <div class="faq-list" style="margin-top: 0;">
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                            <span>What permissions does it need on Android?</span>
+                            <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            FocusPort uses Accessibility Service (to detect and block attempts to open distracting apps), Device Admin (to protect against app removal during active sessions), and Exact Alarm (for automated scheduled sessions).
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                            <span>Does FocusPort collect my personal data?</span>
+                            <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            No. FocusPort does not access or store your messages, passwords, photos, contacts, or browsing history. Permissions are used solely for focus enforcement and session tracking.
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                            <span>How does uninstall protection work?</span>
+                            <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            On Android, FocusPort uses Device Admin and Accessibility permissions to prevent normal attempts to uninstall or remove the application while a focus session is actively running.
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 3: Device Brands & Custom OEM Setup -->
+            <div class="faq-group" style="margin-bottom: 36px;">
+                <h2 style="font-size: 18px; font-weight: 700; color: var(--white); margin-bottom: 14px; letter-spacing: -0.01em;">3. Device Brands &amp; OEM Optimization</h2>
+                <div class="faq-list" style="margin-top: 0;">
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                            <span>Why do I need to enable Autostart on Xiaomi/Redmi/Poco devices?</span>
+                            <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            HyperOS and MIUI aggressive battery savers may close background services. Enabling Autostart ensures FocusPort continues running reliably during an active focus session.
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                            <span>Why does setup vary across Android phone brands?</span>
+                            <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Android manufacturers (Samsung, Xiaomi, Vivo, Oppo, OnePlus) implement custom background management rules. FocusPort guides you through the necessary manufacturer settings for uninterrupted enforcement.
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                            <span>What if I need access to essential apps?</span>
+                            <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            The Essential App Allowlist lets you choose specific tools (such as Phone, SMS, work messaging, or study utilities) that remain accessible during your focus session while all distracting apps remain strictly locked.
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 4: Windows & Availability -->
+            <div class="faq-group" style="margin-bottom: 20px;">
+                <h2 style="font-size: 18px; font-weight: 700; color: var(--white); margin-bottom: 14px; letter-spacing: -0.01em;">4. Windows &amp; Platform Availability</h2>
+                <div class="faq-list" style="margin-top: 0;">
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                            <span>Does FocusPort support Windows?</span>
+                            <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Yes. FocusPort is available for both Android and Windows. The Windows client monitors distracting desktop background processes and blocks distracting websites in your browser during focus sessions.
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                            <span>Is FocusPort good for students?</span>
+                            <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Yes. Students can lock down distracting social feeds and games during revision hours, set scheduled focus blocks for classes or study sessions, and keep educational allowlist tools accessible.
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                            <span>Where can I download FocusPort?</span>
+                            <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            You can download FocusPort on Android via Google Play and get FocusPort for Windows directly from the Microsoft Store.
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 5: Strict Windows, Sync & Alternatives -->
+            <div class="faq-group" style="margin-bottom: 20px;">
+                <h2 style="font-size: 18px; font-weight: 700; color: var(--white); margin-bottom: 14px; letter-spacing: -0.01em;">5. Strict Windows Blocking, Sync &amp; Alternatives</h2>
+                <div class="faq-list" style="margin-top: 0;">
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                            <span>What makes FocusPort a strict blocker for Windows?</span>
+                            <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            It removes the usual escape routes during a session: Task Manager is disabled by Windows policy, Settings and Control Panel are closed, Bulletproof mode blocks switching Windows profiles, several background parts restart each other, and the session resumes after a restart. Allowlist mode adds a rule that anything you did not allow stays blocked.
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                            <span>Can I uninstall FocusPort during a focus session?</span>
+                            <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Not easily. Windows Settings and the classic Control Panel are closed while a session is running, and the service keeps the app&#x27;s files in use, so uninstalling mid-session is not practical. After the session ends you can remove it normally.
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                            <span>Is FocusPort an alternative to Freedom or Cold Turkey on Windows?</span>
+                            <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            It is a free option aimed at the same job, with Allowlist and Blocklist modes, schedules and cross-device sessions with Android. Freedom and Cold Turkey are established tools with their own platforms and pricing, so compare what you need. Our comparison guide is at /blog/freedom-alternative-windows-android.html.
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                            <span>Does FocusPort sync between my Windows PC and my phone?</span>
+                            <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Yes. Sessions, schedules and lists are shared between FocusPort for Windows and FocusPort for Android, and a session started on one can start on the other. Cross-device sync is in beta and free during beta.
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                            <span>Do I need internet for a focus session to stay locked?</span>
+                            <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            No. Blocking runs on each device, so a lost connection does not end a session. Internet is only needed for optional cloud sync between devices.
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+                            <span>What is the difference between Allowlist mode and Blocklist mode?</span>
+                            <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Blocklist mode blocks the apps and websites you list. Allowlist mode blocks everything except the apps and websites you list, which leaves no unlisted app to switch to.
+                        </div>
+                    </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4. FINAL CTA BANNER -->
+    <section class="cta-section" id="download">
+        <div class="section-container">
+            <div class="cta-banner">
+                <h2 class="cta-title">Start your first strict session.</h2>
+                <p class="cta-subtitle">Lock distractions across Android and Windows. Free to use with no subscription required.</p>
+                <div class="cta-buttons">
+                    <a href="https://play.google.com/store/apps/details?id=com.focusport.app" target="_blank" rel="noopener" class="btn-primary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.793 12 3.61 22.186a1.996 1.996 0 0 1-.61-.926V2.74c0-.346.09-.675.245-.96.11-.202.261-.376.45-.512l-.086.546zM15.207 13.414l2.586 2.586-12.049 6.945 9.463-9.531zm0-2.828L5.744 1.055 17.793 8l-2.586 2.586zm1.414 1.414l3.754-2.164a1.5 1.5 0 0 1 0 2.6l-3.754 2.164-1.414-1.414 1.414-1.186z"/></svg>
+                        Download on Google Play
+                    </a>
+                    <a href="https://apps.microsoft.com/detail/9N03JG4MTC2V?hl=en-us&gl=IN&ocid=pdpshare" target="_blank" rel="noopener" class="btn-secondary btn-windows">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0h11.377v11.372H0zm12.623 0H24v11.372H12.623zM0 12.623h11.377V24H0zm12.623 0H24V24H12.623z"/></svg>
+                        Download for Windows
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="nav-logo-icon">
+                        <img src="app-logo.webp" alt="FocusPort" / width="28" height="28" decoding="async">
+                    </div>
+                    <span class="footer-brand-name">FocusPort</span>
+                    <p class="footer-brand-desc">Free strict app blocker for Android and Windows. Support replies within 24 hours.</p>
+                </div>
+                <div class="footer-nav-cols">
+                    <div class="footer-col">
+                        <div class="footer-col-title">Product</div>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="features.html">Features</a></li>
+                            <li><a href="windows.html">Windows App</a></li>
+                            <li><a href="https://play.google.com/store/apps/details?id=com.focusport.app" target="_blank" rel="noopener">Google Play</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <div class="footer-col-title">Use Cases</div>
+                        <ul>
+                            <li><a href="students.html">For Students</a></li>
+                            <li><a href="professionals.html">For Professionals</a></li>
+                            <li><a href="blog/how-to-lock-phone-during-study-and-exams.html">Study Lock Guide</a></li>
+                            <li><a href="blog/how-to-stop-doomscrolling.html">Stop Doomscrolling</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <div class="footer-col-title">Resources &amp; Legal</div>
+                        <ul>
+                            <li><a href="blog/index.html">Blog</a></li>
+                            <li><a href="apps.html">Our Apps</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                            <li><a href="contact.html">Contact Support</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 FocusPort. All rights reserved.</span>
+                <span>support@focusport.in</span>
+            </div>
+        </div>
     </footer>
 
+    <!-- WINDOWS BETA LEAD CAPTURE MODAL -->
+    
+
     <script>
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenuBtn.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
-            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
-        });
-        document.querySelectorAll('.mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenuBtn.classList.remove('active');
-                mobileMenu.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-        });
-
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
+        // THEME CONTROLLER & NAVIGATION
+        (function() {
+            function getTheme() {
+                return document.documentElement.dataset.theme || 
+                    (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
             }
-        });
 
+            function updateThemeUI(theme) {
+                document.documentElement.dataset.theme = theme;
+                const isDark = theme === 'dark';
+                const label = isDark ? 'Switch to light mode' : 'Switch to dark mode';
+                const pressed = isDark ? 'true' : 'false';
+                
+                document.querySelectorAll('.theme-toggle').forEach(btn => {
+                    btn.setAttribute('aria-label', label);
+                    btn.setAttribute('aria-pressed', pressed);
+                });
+
+                const metaTheme = document.querySelector('meta[name="theme-color"]');
+                if (metaTheme) {
+                    metaTheme.setAttribute('content', isDark ? '#0F1115' : '#FAFAF9');
+                }
+            }
+
+            function toggleTheme() {
+                const current = getTheme();
+                const next = current === 'dark' ? 'light' : 'dark';
+                try {
+                    localStorage.setItem('focusport_theme', next);
+                } catch(e) {}
+                document.documentElement.classList.add('theme-transition');
+                updateThemeUI(next);
+                setTimeout(() => {
+                    document.documentElement.classList.remove('theme-transition');
+                }, 250);
+            }
+
+            // Init UI state
+            updateThemeUI(getTheme());
+
+            // Listen to toggle clicks
+            document.querySelectorAll('.theme-toggle').forEach(btn => {
+                btn.addEventListener('click', toggleTheme);
+            });
+
+            // Listen to system preference changes if no manual override stored
+            if (window.matchMedia) {
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+                    try {
+                        if (!localStorage.getItem('focusport_theme')) {
+                            updateThemeUI(e.matches ? 'dark' : 'light');
+                        }
+                    } catch(err) {}
+                });
+            }
+
+            // HEADER SCROLL (rAF throttled)
+            const headerEl = document.querySelector('.site-header');
+            if (headerEl) {
+                let ticking = false;
+                window.addEventListener('scroll', () => {
+                    if (!ticking) {
+                        window.requestAnimationFrame(() => {
+                            if (window.scrollY > 8) {
+                                headerEl.classList.add('scrolled');
+                            } else {
+                                headerEl.classList.remove('scrolled');
+                            }
+                            ticking = false;
+                        });
+                        ticking = true;
+                    }
+                }, { passive: true });
+            }
+
+            // MOBILE FULL-SCREEN SHEET
+            const mobileToggle = document.getElementById('mobileToggle');
+            const mobileNav = document.getElementById('mobileNav');
+            if (mobileToggle && mobileNav) {
+                function openMobileMenu() {
+                    mobileNav.classList.add('open');
+                    mobileNav.removeAttribute('hidden');
+                    mobileNav.setAttribute('aria-hidden', 'false');
+                    mobileToggle.setAttribute('aria-expanded', 'true');
+                    document.body.style.overflow = 'hidden';
+                }
+                function closeMobileMenu() {
+                    mobileNav.classList.remove('open');
+                    mobileNav.setAttribute('hidden', '');
+                    mobileNav.setAttribute('aria-hidden', 'true');
+                    mobileToggle.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                }
+                mobileToggle.addEventListener('click', () => {
+                    const isOpen = mobileNav.classList.contains('open');
+                    if (isOpen) closeMobileMenu();
+                    else openMobileMenu();
+                });
+                document.querySelectorAll('.mobile-nav a').forEach(link => {
+                    link.addEventListener('click', closeMobileMenu);
+                });
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && mobileNav.classList.contains('open')) {
+                        closeMobileMenu();
+                        mobileToggle.focus();
+                    }
+                });
+                window.addEventListener('resize', () => {
+                    if (window.innerWidth >= 1024 && mobileNav.classList.contains('open')) {
+                        closeMobileMenu();
+                    }
+                });
+            }
+        })();
+
+        // FAQ ACCORDION
         function toggleFaq(btn) {
-            const item = btn.parentElement;
+            const item = btn.closest('.faq-item');
+            if (!item) return;
             const isOpen = item.classList.contains('open');
             document.querySelectorAll('.faq-item').forEach(i => {
                 i.classList.remove('open');
-                i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+                const q = i.querySelector('.faq-question');
+                if (q) q.setAttribute('aria-expanded', 'false');
             });
             if (!isOpen) {
                 item.classList.add('open');
                 btn.setAttribute('aria-expanded', 'true');
             }
         }
+
+        
+        // IMAGE FADE-IN (PREVENT CLS & SMOOTH ENTRANCE)
+        document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+            if (img.complete) {
+                img.classList.add('loaded');
+            } else {
+                img.addEventListener('load', () => img.classList.add('loaded'), { once: true });
+            }
+        });
+        // Theme Toggle Functionality
+        const themeToggleBtns = document.querySelectorAll('.theme-toggle');
+        function updateThemeToggleUI(theme) {
+            themeToggleBtns.forEach(btn => {
+                const isDark = theme === 'dark';
+                btn.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+                btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+            });
+        }
+
+        // Set initial toggle UI state
+        const currentTheme = document.documentElement.dataset.theme || 'dark';
+        updateThemeToggleUI(currentTheme);
+
+        themeToggleBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const isDark = document.documentElement.dataset.theme === 'dark';
+                const newTheme = isDark ? 'light' : 'dark';
+                document.documentElement.dataset.theme = newTheme;
+                try {
+                    localStorage.setItem('focusport_theme', newTheme);
+                } catch(e) {}
+                const themeColor = newTheme === 'dark' ? '#0F1115' : '#FAFAF9';
+                const meta = document.querySelector('meta[name="theme-color"]');
+                if (meta) meta.setAttribute('content', themeColor);
+                updateThemeToggleUI(newTheme);
+            });
+        });
+
     </script>
 </body>
 </html>
